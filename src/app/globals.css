@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #eeeeee;
+  --color-foreground: #ededed;
+  --font-montserrat: var(--font-montserrat);
+}
+
+@layer base {
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-montserrat);
+  }
+}
