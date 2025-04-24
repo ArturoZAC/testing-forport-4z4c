@@ -51,7 +51,7 @@ export const NavBar = () => {
         {/* Navbar */}
         <div className="flex items-center justify-center gap-x-[20px]">
           <nav>
-            <ul className="flex items-center justify-center text-[14px] gap-x-[25px] h-[29px]">
+            <ul className="flex items-center justify-center text-small-r-d gap-x-[25px] h-[29px]">
               {
                 links.map((link) => (
                   <li key={link.path}><Link href="/" className={`${activeLink === link.path ? 'bg-[#9F03A7] rounded-lg' : ''} `} onClick={() => handleLinkClick(link.path)}>{link.name}</Link></li>
@@ -59,9 +59,9 @@ export const NavBar = () => {
               }
             </ul>
           </nav>
-          <div className="flex items-center justify-center p-[5px] bg-[#9F03A7] rounded-lg gap-x-[5px]">
-            <p className="font-bold">LOG</p>
-            <p className="font-bold">ENG</p>
+          <div className="text-body-small-b-d flex items-center justify-center p-[5px] bg-[#9F03A7] rounded-lg gap-x-[5px]">
+            <p>LOG</p>
+            <p>ENG</p>
           </div>
         </div>
       </MainContainer>
