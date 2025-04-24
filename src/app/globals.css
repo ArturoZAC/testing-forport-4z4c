@@ -1,11 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #eeeeee;
-  --color-foreground: #ededed;
+  --color-background: #0A0A0A;
+  --color-foreground: white;
   --font-montserrat: var(--font-montserrat);
+
 }
 
+@theme {
+  --color-primary: #0A0A0A;
+  --color-secondary: white;
+  --color-third: #c26fde;
+  --color-third-back: #774192;
+
+  --animate-navli: navli 0.3s ease-in-out;
+
+
+  @keyframes navli {
+    0% {
+      scale: 1;
+    }
+    100% {
+      scale: 1.1;
+    }
+  }
+
+}
 
 @layer base {
   body {
@@ -17,8 +37,6 @@
     cursor: pointer;
   }
 }
-
-
 
 @layer components {
 
@@ -49,6 +67,15 @@
   .text-small-b-d {
     @apply text-[14px] font-normal leading-[1.4] tracking-[0em]
   }
+
+  .text-tiny-r-d {
+    @apply text-[12px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-tiny-b-d {
+    @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
+  }
+
 
 
 }
