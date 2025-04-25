@@ -11,20 +11,22 @@
   --color-primary: #0A0A0A;
   --color-secondary: white;
   --color-third: #c26fde;
+  --color-third-light: #e9a7ff;
   --color-third-back: #774192;
 
-  --animate-navli: navli 0.3s ease-in-out;
+  --animate-colorChange: colorChange 0.3s ease-in forwards;
 
-
-  @keyframes navli {
-    0% {
-      scale: 1;
+  @keyframes colorChange {
+    from {
+      color: var(--color-secondary);
     }
-    100% {
-      scale: 1.1;
+    to {
+      color: var(--color-third);
     }
   }
 
+
+    
 }
 
 @layer base {
@@ -35,6 +37,27 @@
   }
   button {
     cursor: pointer;
+  }
+
+  li.underline-animate {
+    position: relative;
+  }
+
+  li.underline-animate::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-third);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  li.underline-animate.active::after {
+    transform: scaleX(1);
   }
 }
 

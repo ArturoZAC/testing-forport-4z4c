@@ -45,7 +45,7 @@ export const NavBar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={30} style={{ minWidth: '75px' }} />
+            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} style={{ minWidth: '75px' }} />
           </Link>
         </div>
         {/* Navbar */}
@@ -53,8 +53,13 @@ export const NavBar = () => {
           <nav>
             <ul className="flex items-center justify-center text-small-r-d gap-x-[20px] h-[29px]">
               {
+                // border-b-2 border-third
                 links.map((link) => (
-                  <li className={` ${activeLink === link.path ? 'text-third border-b-2 border-third animate-navli' : ''} flex flex-col items-center justify-center h-[inherit]`} key={link.path}><Link href="/" className={`${activeLink === link.path ? '' : ''} `} onClick={() => handleLinkClick(link.path)}>{link.name}</Link></li>
+                  <li className={`underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''} flex flex-col items-center justify-center h-[inherit]`} key={link.path}>
+                    <Link href="/" onClick={() => handleLinkClick(link.path)}>
+                      {link.name}
+                    </Link>
+                  </li>
                 ))
               }
             </ul>
