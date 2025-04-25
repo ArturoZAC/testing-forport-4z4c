@@ -1,4 +1,5 @@
 import { MainContainer } from "../responsive/MainContainer"
+import { GradientLine } from "./GradientLine";
 // import { GradientLine } from "./GradientLine";
 
 export const BodyHero = () => {
@@ -22,8 +23,11 @@ export const BodyHero = () => {
           <button className="bg-[#0A0A0A] w-[180px] p-[10px] rounded-full border border-neutral-600">My Cv 📍📄</button>
         </div>
 
+        {/* <GradientLine /> */}
+
 
       </MainContainer>
+
 
     </div>
   )
