@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-background: #0A0A0A;
+  --color-background: #010101;
   --color-foreground: white;
   --font-montserrat: var(--font-montserrat);
 
 }
 
 @theme {
-  --color-primary: #0A0A0A;
+  --color-primary: #010101;
   --color-secondary: white;
   --color-third: #c26fde;
   --color-third-light: #e9a7ff;

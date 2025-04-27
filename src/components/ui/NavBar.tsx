@@ -41,7 +41,7 @@ export const NavBar = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-[10px]">
-      <MainContainer className="h-[60px] rounded-full flex px-[25px] py-[15px] justify-between bg-[#0A0A0A] border border-neutral-600">
+      <MainContainer className="h-[60px] rounded-full flex px-[25px] py-[15px] justify-between bg-primary border-2 border-neutral-600">
         {/* Logo */}
         <div>
           <Link href="/">
@@ -64,7 +64,7 @@ export const NavBar = () => {
               }
             </ul>
           </nav>
-          <div className="text-body-small-b-d flex items-center justify-center p-[5px] bg-third-back rounded-lg gap-x-[5px]">
+          <div className="text-body-small-b-d flex items-center justify-center p-[5px] bg-third-back rounded-lg gap-x-[10px]">
             <div>
               <Image src='/navbar/united-states.png' alt='unated-states' width={25} height={25} />
             </div>
