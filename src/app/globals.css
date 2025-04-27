@@ -15,6 +15,7 @@
   --color-third-back: #774192;
 
   --animate-colorChange: colorChange 0.3s ease-in forwards;
+  --animate-shine: shine 1.5s infinite linear;
 
   @keyframes colorChange {
     from {
@@ -25,7 +26,14 @@
     }
   }
 
-
+  @keyframes shine {
+    0% {
+      transform: translateX(0%) rotate(90deg);
+    }
+    100% {
+      transform: translateX(500%) rotate(90deg);
+    }
+  }
     
 }
 

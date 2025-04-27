@@ -45,7 +45,7 @@ export const NavBar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} style={{ minWidth: '75px' }} />
+            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} style={{ minWidth: '75px', height: '25px' }} />
           </Link>
         </div>
         {/* Navbar */}
