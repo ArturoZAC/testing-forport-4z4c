@@ -9,7 +9,7 @@
 
 @theme {
   --color-primary: #010101;
-  --color-secondary: white;
+  --color-secondary: #ffffff;
   --color-third: #c26fde;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
@@ -71,6 +71,10 @@
 }
 
 @layer components {
+
+  .text-h2-r-d {
+    @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
+  }
 
   .text-display-m-d {
     @apply text-[64px] font-semibold leading-[1.2] tracking-[-0.02em]

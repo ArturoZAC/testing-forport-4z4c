@@ -45,7 +45,7 @@ export const NavBar = () => {
         {/* Logo */}
         <div>
           <Link href="/">
-            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} style={{ minWidth: '75px', height: '25px' }} />
+            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} style={{ minWidth: '75px', height: '25px' }}/>
           </Link>
         </div>
         {/* Navbar */}
@@ -55,7 +55,7 @@ export const NavBar = () => {
               {
                 // border-b-2 border-third
                 links.map((link) => (
-                  <li className={`underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''} flex flex-col items-center justify-center h-[inherit]`} key={link.path}>
+                  <li className={`underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''} flex flex-col items-center justify-center h-[inherit] text-secondary`} key={link.path}>
                     <Link href="/" onClick={() => handleLinkClick(link.path)}>
                       {link.name}
                     </Link>
@@ -64,7 +64,7 @@ export const NavBar = () => {
               }
             </ul>
           </nav>
-          <div className="text-body-small-b-d flex items-center justify-center p-[5px] bg-third-back rounded-lg gap-x-[10px]">
+          <div className="text-body-small-b-d flex items-center justify-center p-[5px] bg-third-back rounded-lg gap-x-[10px] text-secondary">
             <div>
               <Image src='/navbar/united-states.png' alt='unated-states' width={25} height={25} />
             </div>
