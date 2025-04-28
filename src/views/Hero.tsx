@@ -7,7 +7,7 @@ export const Hero = () => {
       <>
         <NavBar />
         <BodyHero />
-      </>
+      </> 
 
     // </section>
   )

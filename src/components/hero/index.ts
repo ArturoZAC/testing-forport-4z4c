@@ -1,1 +1,1 @@
-export * from './GradientLine';
+export * from './BackImage';

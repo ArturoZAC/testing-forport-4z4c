@@ -1,0 +1,11 @@
+import Image from "next/image";
+
+export const BackImage = () => {
+  return (
+    <div className="flex justify-center items-center relative bottom-19">
+      <div className="flex justify-center items-center absolute -z-10">
+        <Image src="/custom/off-arc.png" alt="bg" width={950} height={430} style={{ height: '430px'}}  className="mask-x-from-70% mask-x-to-90% mask-y-from-60% mask-y-to-90%" />
+      </div>
+    </div>
+  );
+};

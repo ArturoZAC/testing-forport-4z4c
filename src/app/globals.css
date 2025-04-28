@@ -15,7 +15,7 @@
   --color-third-back: #774192;
 
   --animate-colorChange: colorChange 0.3s ease-in forwards;
-  --animate-shine: shine 1.5s infinite linear;
+  --animate-shine: shine 2s infinite linear;
 
   @keyframes colorChange {
     from {
@@ -28,10 +28,10 @@
 
   @keyframes shine {
     0% {
-      transform: translateX(0%) rotate(90deg);
+      transform: translateX(-100%) rotate(90deg);
     }
     100% {
-      transform: translateX(500%) rotate(90deg);
+      transform: translateX(700%) rotate(90deg);
     }
   }
     
@@ -67,6 +67,7 @@
   li.underline-animate.active::after {
     transform: scaleX(1);
   }
+  
 }
 
 @layer components {
