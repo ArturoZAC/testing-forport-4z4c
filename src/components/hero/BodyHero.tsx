@@ -3,7 +3,7 @@ import { BackImage } from "./BackImage";
 
 export const BodyHero = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-[calc(100vh-70px)]">
+    <div className="flex flex-col justify-center items-center h-[calc(100vh-70px)]">
       <MainContainer className="space-y-[15px] relative">
         <div className="text-tiny-b-d grid place-items-center overflow-hidden relative text-secondary">
           <button className="relative z-9 bg-primary max-w-full py-[6px] px-[16px] rounded-full border-2 border-neutral-600 overflow-hidden">

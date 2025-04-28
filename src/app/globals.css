@@ -16,6 +16,7 @@
 
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 2s infinite linear;
+  --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
 
   @keyframes colorChange {
     from {
@@ -33,6 +34,11 @@
     100% {
       transform: translateX(1600%) rotate(205deg);
     }
+  }
+
+  @keyframes scaleTitle {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
   }
     
 }
@@ -78,6 +84,22 @@
 
   .text-display-m-d {
     @apply text-[64px] font-semibold leading-[1.2] tracking-[-0.02em]
+  }
+
+  .text-subtitle1-b-d {
+    @apply text-[28px] font-bold leading-[1.2] tracking-[0em]
+  }
+
+  .text-subtitle1-r-d {
+    @apply text-[28px] font-normal leading-[1.2] tracking-[0em]
+  }
+
+  .text-lead-r-d {
+    @apply text-[20px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-lead-b-d {
+    @apply text-[20px] font-bold leading-[1.4] tracking-[0em]
   }
 
   .text-body-large-r-d {
