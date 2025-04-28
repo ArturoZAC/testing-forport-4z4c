@@ -5,8 +5,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* <Hero /> */}
-      <About />
+      <Hero />
+      {/* <About /> */}
     
     </>
   );

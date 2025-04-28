@@ -6,11 +6,11 @@ export const BodyHero = () => {
     <div className="flex flex-col justify-center items-center w-screen h-[calc(100vh-70px)]">
       <MainContainer className="space-y-[15px] relative">
         <div className="text-tiny-b-d grid place-items-center overflow-hidden relative text-secondary">
-          <button className="relative z-9 bg-[#0A0A0A] max-w-full py-[6px] px-[16px] rounded-full border-2 border-neutral-600 overflow-hidden">
-            <span className="absolute top-[-10px] left-[-50px] w-[50px] h-[50px] animate-shine rounded-tr-4xl rounded-bl-4xl bg-gradient-to-t from-transparent via-white to-transparent "></span>
+          <button className="relative z-9 bg-primary max-w-full py-[6px] px-[16px] rounded-full border-2 border-neutral-600 overflow-hidden">
+            <span className="absolute top-[-8px] left-[-50px] w-[20px] h-[45px] animate-shine rounded-tl-2xl rounded-br-2xl bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></span>
             Actively Seeking Job Opportunities
           </button>
-        </div>
+        </div> 
 
         <div className="text-display-m-d text-center bg-gradient-to-r from-[#f7dcff] to-third-back text-transparent bg-clip-text">
           <p>Crafting Beautiful & </p>
@@ -21,7 +21,7 @@ export const BodyHero = () => {
           <p>performant, user-friendly, and scalable applications</p>
         </div>
         <div className="text-body-large-r-d grid place-items-center text-secondary">
-          <button className="bg-[#0A0A0A] w-fit px-4 py-2 rounded-full border border-neutral-600">
+          <button className="bg-primary w-fit px-4 py-2 rounded-full border border-neutral-600">
             Download Cv 📍📄
           </button>
         </div>

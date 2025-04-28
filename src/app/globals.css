@@ -28,10 +28,10 @@
 
   @keyframes shine {
     0% {
-      transform: translateX(-100%) rotate(90deg);
+      transform: translateX(50%) rotate(205deg);
     }
     100% {
-      transform: translateX(700%) rotate(90deg);
+      transform: translateX(1600%) rotate(205deg);
     }
   }
     
