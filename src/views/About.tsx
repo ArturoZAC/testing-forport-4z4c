@@ -4,7 +4,7 @@ import { Title } from "@/components/ui";
 export const About = () => {
   return (
     <section className="flex flex-col gap-y-[65px] mt-20">
-      <Title />
+      <Title title="About Me" />
       <BodyAbout/>
     </section>
   );
