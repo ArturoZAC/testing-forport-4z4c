@@ -41,7 +41,7 @@ export const NavBar = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-[10px]">
-      <MainContainer className="h-[60px] rounded-full flex px-[25px] py-[15px] justify-between bg-primary border-2 border-neutral-600">
+      <MainContainer className="h-[60px] rounded-full flex px-[25px] py-[15px] justify-between bg-primary border-3 border-neutral-800">
         {/* Logo */}
         <div>
           <Link href="/">

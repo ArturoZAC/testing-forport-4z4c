@@ -3,9 +3,9 @@ import { NavBar } from "@/components/ui";
 
 export const Hero = () => {
   return (
-      <>
-        <NavBar />
-        <BodyHero />
-      </> 
+    <section>
+      <NavBar />
+      <BodyHero />
+    </section> 
   )
 };
