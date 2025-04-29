@@ -5,7 +5,7 @@ export const AboutCard = () => {
 
   return (
     <div className="relative bg-neutral-900 w-full max-w-[584px] h-[600px] p-10 rounded-[34px] flex flex-col justify-around
-     before:bg-third-back before:w-full  before:max-w-[584px]  before:min-h-[600px] before:absolute before:right-2 before:rounded-[34px] before:rotate-[-4deg] before:-z-10 before:shadow-lg before:shadow-third-light/50
+     before:bg-third-back before:w-full  before:max-w-[584px]  before:min-h-[600px] before:absolute before:right-2 before:rounded-[34px] before:rotate-[-4deg] before:-z-10 before:shadow-lg before:shadow-fuchsia-700/50
     ">
       <div className="space-y-6">
         <p className="text-subtitle1-b-d">WHO I AM</p>

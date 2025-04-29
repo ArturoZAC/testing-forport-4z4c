@@ -1,15 +1,17 @@
-import { About } from "@/views/About";
-import { Hero } from "@/views/Hero";
+import { About, Footer, Hero } from "@/views";
 
 export default function HomePage() {
 
   return (
-    <main className="px-6">
-    {/* <> */}
-      <Hero />
-      <About />
-    {/* </> */}
+    // <main className="px-6">
+
+    <>
+    
+    <Hero/>
+    <About/>
+    <Footer />
+    
+    </>
       
-    </main>
   );
 }

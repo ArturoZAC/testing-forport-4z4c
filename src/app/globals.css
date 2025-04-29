@@ -94,6 +94,14 @@
     @apply text-[28px] font-normal leading-[1.2] tracking-[0em]
   }
 
+  .text-subtitle2-b-d {
+    @apply text-[24px] font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-subtitle2-r-d {
+    @apply text-[24px] font-normal leading-[1.4] tracking-[0em]
+  }
+
   .text-lead-r-d {
     @apply text-[20px] font-normal leading-[1.4] tracking-[0em]
   }
