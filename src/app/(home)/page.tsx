@@ -1,4 +1,4 @@
-import { About, Footer, Hero } from "@/views";
+import { About, Contact, Footer, Hero } from "@/views";
 
 export default function HomePage() {
 
@@ -6,11 +6,11 @@ export default function HomePage() {
     // <main className="px-6">
 
     <>
-    
-    <Hero/>
-    <About/>
-    <Footer />
-    
+    {/* <Hero/> */}
+    {/* <About/> */}
+    {/* <Footer /> */}
+    <Contact />
+
     </>
       
   );

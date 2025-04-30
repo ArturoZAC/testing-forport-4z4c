@@ -13,6 +13,8 @@
   --color-third: #c26fde;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
+  --color-fourth: #171717;
+  --color-fourth-back: #262626;
 
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 2s infinite linear;
@@ -77,6 +79,10 @@
 }
 
 @layer components {
+
+  .input-custom {
+    @apply rounded-md bg-fourth h-full outline-none border-3 border-neutral-800 focus:border-neutral-500 transition-colors duration-300;
+  }
 
   .text-h2-r-d {
     @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
