@@ -19,6 +19,7 @@
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 2s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
+  --animate-scrollSkills: scrollSkills 25s linear infinite;
 
   @keyframes colorChange {
     from {
@@ -41,6 +42,11 @@
   @keyframes scaleTitle {
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
+  }
+
+  @keyframes scrollSkills {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-100%); }
   }
     
 }

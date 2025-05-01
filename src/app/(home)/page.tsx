@@ -1,4 +1,4 @@
-import { About, Contact, Footer, Hero } from "@/views";
+import { About, Contact, Footer, Hero, Skills } from "@/views";
 
 export default function HomePage() {
 
@@ -8,9 +8,9 @@ export default function HomePage() {
     <>
     {/* <Hero/> */}
     {/* <About/> */}
+    {/* <Contact /> */}
     {/* <Footer /> */}
-    <Contact />
-
+    <Skills />
     </>
       
   );
