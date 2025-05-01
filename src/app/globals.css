@@ -19,7 +19,7 @@
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 2s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
-  --animate-scrollSkills: scrollSkills 25s linear infinite;
+  /* --animate-scrollSkills: scrollSkills 10s linear infinite; */
 
   @keyframes colorChange {
     from {
@@ -45,8 +45,7 @@
   }
 
   @keyframes scrollSkills {
-    from { transform: translateX(0%); }
-    to { transform: translateX(-100%); }
+    to { transform: translateX(calc( -50% - 20px )); }
   }
     
 }
@@ -81,8 +80,19 @@
   li.underline-animate.active::after {
     transform: scaleX(1);
   }
-  
+
 }
+
+@layer utilities {
+  .animate-scrollSkills {
+    animation: scrollSkills 30s linear infinite;
+  }
+
+  .group:hover .animate-scrollSkills {
+    animation-play-state: paused;
+  }
+}
+
 
 @layer components {
 
