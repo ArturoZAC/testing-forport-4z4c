@@ -2,16 +2,11 @@ import { MainContainer } from "../responsive/MainContainer";
 
 interface Props {
   title: string;
-  isGradient?: boolean;
 }
 
-export const Title = ( { title, isGradient = true } : Props) => {
+export const Title = ( { title } : Props) => {
 
-  const gradientClass = isGradient 
-    ? 'after:bg-linear-to-r after:from-violet-800 after:to-fuchsia-700'
-    // : 'after:bg-fourth-back'
-    : 'after:bg-linear-to-l after:from-violet-800 after:to-fuchsia-800'
-    // : 'after:bg-linear-to-br from-violet-600 to-fuchsia-600'
+  const gradientClass = 'after:bg-linear-to-l after:from-violet-700 after:to-fuchsia-700'
 
   return (
     <div className="flex col justify-center items-center">

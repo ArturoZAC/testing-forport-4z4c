@@ -15,7 +15,7 @@ export const Form = () => {
           <label htmlFor="message" className="text-body-large-r-d">Your Message</label>
           <textarea placeholder="Message" name="message" id="message" className="p-4 min-h-40 resize-none input-custom"></textarea>
         </div>
-        <button type="submit" className="h-full min-h-12 bg-linear-to-tr from-violet-600 to-fuchsia-600 rounded-md text-lead-b-d hover:from-violet-800 hover:to-fuchsia-800 transition-colors duration-300">Send</button>
+        <button type="submit" className="h-full min-h-12 bg-linear-to-l from-violet-700 to-fuchsia-700 rounded-md text-lead-b-d hover:from-violet-900 hover:to-fuchsia-900 transition-colors duration-300">Send</button>
       </form>
     </div>
   );
