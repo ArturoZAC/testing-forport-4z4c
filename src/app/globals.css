@@ -100,12 +100,16 @@
     @apply rounded-md bg-fourth h-full outline-none border-3 border-neutral-800 focus:border-neutral-500 transition-colors duration-300;
   }
 
-  .text-h2-r-d {
-    @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
-  }
-
   .text-display-m-d {
     @apply text-[64px] font-semibold leading-[1.2] tracking-[-0.02em]
+  }
+  
+  .text-h2-sm-d {
+    @apply text-[48px] font-semibold leading-[1.2] tracking-[-0.01em]
+  }
+
+  .text-h2-r-d {
+    @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
   }
 
   .text-subtitle1-b-d {
@@ -144,6 +148,10 @@
     @apply text-[16px] font-normal leading-[1.4] tracking-[0em]
   }
 
+  .text-body-small-sm-d {
+    @apply text-[16px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
   .text-body-small-b-d {
     @apply text-[16px] font-bold leading-[1.4] tracking-[0em]
   }
@@ -163,7 +171,5 @@
   .text-tiny-b-d {
     @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
   }
-
-
 
 }
