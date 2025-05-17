@@ -6,11 +6,11 @@ export default function HomePage() {
     // <main className="px-6">
     
     <>
-    <Hero/>
+    {/* <Hero/> */}
     <About/>
     <Skills />
     <Contact />
-    <Footer />
+    {/* <Footer /> */}
     </>
       
   );

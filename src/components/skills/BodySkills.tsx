@@ -13,7 +13,7 @@ export const BodySkills = () => {
             {[...skills, ...skills].map((skill, id) => (
                 <div
                   key={id}
-                  className="size-[150px] flex flex-col justify-center items-center gap-y-6 bg-fourth border-3 border-neutral-800 rounded-md"
+                  className="size-[150px] flex flex-col justify-center items-center gap-y-6 bg-fourth border-3 border-neutral-700 rounded-md"
                 >
                   <div className="size-[50px] flex justify-center items-center">
                     Icon
