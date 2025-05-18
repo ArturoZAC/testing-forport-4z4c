@@ -10,7 +10,7 @@
 @theme {
   --color-primary: #010101;
   --color-secondary: #ffffff;
-  --color-third: #c26fde;
+  --color-third: #A31AEF;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
   --color-fourth: #171717;
@@ -71,7 +71,7 @@
     left: 0;
     height: 2px;
     width: 100%;
-    background-color: var(--color-third);
+    background: linear-gradient(to left, #7F22FE, #C800DE);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
