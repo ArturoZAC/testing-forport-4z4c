@@ -26,7 +26,7 @@ export const BodyHero = () => {
           </button>
         </div>
 
-        {/* <BackImage /> */}
+        <BackImage />
       </MainContainer>
     </div>
   )
