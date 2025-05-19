@@ -20,7 +20,11 @@ export const BodyHero = () => {
           <p>Hey, I&apos;m Arturo Araujo, a Full Stack Developer passionate about building </p>
           <p>performant, user-friendly, and scalable applications</p>
         </div>
-        <div className="text-body-large-r-d grid place-items-center text-secondary">
+        <div className="text-body-large-r-d flex justify-center text-secondary gap-x-4">
+          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-neutral-700">
+            Download Cv 📍📄
+          </button>
+
           <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-neutral-700">
             Download Cv 📍📄
           </button>
