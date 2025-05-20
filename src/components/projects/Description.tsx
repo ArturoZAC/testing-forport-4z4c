@@ -20,14 +20,14 @@ export const Description = () => {
         <div className="space-y-3">
           <p className="break-words">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.</p>
         </div>
-        <div className="grid grid-cols-4">
-          <Tech />
-          {/* <Tech />
+        <div className="grid grid-cols-4 gap-2">
           <Tech />
           <Tech />
           <Tech />
           <Tech />
-          <Tech /> */}
+          <Tech />
+          <Tech />
+          <Tech />
         </div>
       </div>
     </div>
