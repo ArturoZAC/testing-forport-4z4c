@@ -1,5 +1,4 @@
-import { About, Contact, Footer, Hero, Skills } from "@/views";
-import { Projects } from "@/views/Projects";
+import { About, Contact, Education, Footer, Hero, Projects, Skills } from "@/views";
 
 export default function HomePage() {
 
@@ -12,7 +11,8 @@ export default function HomePage() {
     {/* <Skills /> */}
     {/* <Contact /> */}
     {/* <Footer /> */}
-    <Projects />
+    {/* <Projects /> */}
+    <Education />
     </>
       
   );
