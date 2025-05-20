@@ -1,7 +1,7 @@
 
 export const Form = () => {
   return (
-    <div className="w-full max-w-1/2h-auto">
+    <div className="w-full max-w-1/2 h-auto">
       <form className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-4">
           <label htmlFor="name" className="text-body-large-r-d">Your Name</label>
