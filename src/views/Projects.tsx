@@ -4,7 +4,7 @@ import React from "react";
 
 export const Projects = () => {
   return (
-    <section>
+    <section className="flex flex-col gap-y-18">
       <Title title="Projects"/>
       <BodyProject />
     </section>

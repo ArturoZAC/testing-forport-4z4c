@@ -140,6 +140,10 @@
     @apply text-[18px] font-normal leading-[1.4] tracking-[0em]
   }
 
+  .text-body-large-sm-d {
+    @apply text-[18px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
   .text-body-large-b-d {
     @apply text-[18px] font-bold leading-[1.4] tracking-[0em]
   }
