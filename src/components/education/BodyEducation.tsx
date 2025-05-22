@@ -1,11 +1,12 @@
 import { MainContainer } from "../responsive/MainContainer"
+import { Certifications } from "./Certifications"
 import { SideLeft } from "./SideLeft"
 import { SideMiddle } from "./SideMiddle"
 import { SideRight } from "./SideRight"
 
 export const BodyEducation = () => {
   return (
-    <div className="flex w-full justify-center items-center">
+    <div className="flex flex-col w-full justify-center items-center">
       <MainContainer className="flex justify-center items-stretch h-auto">
         <div className="w-1/2 flex flex-col justify-center items-center h-full">
           <SideLeft />
@@ -17,6 +18,7 @@ export const BodyEducation = () => {
           <SideRight />
         </div>
       </MainContainer>
+      <Certifications />
     </div>
   )
 }
