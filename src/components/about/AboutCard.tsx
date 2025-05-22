@@ -1,8 +1,6 @@
 
 export const AboutCard = () => {
 
-  // shadow-lg shadow-third-light/50
-
   return (
     <div className="relative bg-neutral-900 w-full max-w-1/2 h-[600px] rounded-4xl 
      before:bg-linear-to-r before:from-violet-600 before:to-fuchsia-600 before:w-full before:max-w-[584px] before:min-h-[600px] before:absolute before:right-2 before:rounded-[34px] before:rotate-[-4deg] before:-z-10
