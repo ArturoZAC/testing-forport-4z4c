@@ -15,6 +15,7 @@
   --color-third-back: #774192;
   --color-fourth: #171717;
   --color-fourth-back: #262626;
+  --color-border: #404040;
 
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 1.5s infinite linear;

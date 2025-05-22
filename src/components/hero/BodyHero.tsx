@@ -6,7 +6,7 @@ export const BodyHero = () => {
     <div className="flex flex-col justify-center items-center h-[calc(100vh-70px)]">
       <MainContainer className="space-y-[15px] relative">
         <div className="text-tiny-b-d grid place-items-center overflow-hidden relative text-secondary">
-          <button className="relative z-9 bg-primary max-w-full py-[6px] px-[16px] rounded-full border-3 border-neutral-700 overflow-hidden">
+          <button className="relative z-9 bg-primary max-w-full py-[6px] px-[16px] rounded-full border-3 border-border overflow-hidden">
             <span className="absolute top-[-8px] left-[-50px] w-[20px] h-[45px] animate-shine rounded-tl-2xl rounded-br-2xl bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></span>
             Actively Seeking Job Opportunities
           </button>
@@ -21,11 +21,11 @@ export const BodyHero = () => {
           <p>performant, user-friendly, and scalable applications</p>
         </div>
         <div className="text-body-large-r-d flex justify-center text-secondary gap-x-4">
-          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-neutral-700">
+          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-border">
             Download Cv 📍📄
           </button>
 
-          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-neutral-700">
+          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-border">
             Download Cv 📍📄
           </button>
         </div>
