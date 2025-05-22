@@ -9,7 +9,7 @@ export const SideMiddle = () => {
         {Array.from({ length: numDots }).map((_, index) => (
           <div
             key={index}
-            className={`h-5 w-5 rounded-full bg-gradient-to-l from-violet-600 to-fuchsia-500 blur-[2px] opacity-90 ${
+            className={`h-5 w-5 rounded-full bg-gradient-to-l from-violet-600 to-fuchsia-500 ${
               index === 0 
                 ? '' 
                 : index === 1 
