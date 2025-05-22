@@ -10,13 +10,11 @@ export const BodyEducation = () => {
         <div className="w-1/2 flex flex-col justify-center items-center h-full">
           <SideLeft />
           <SideLeft />
-          <SideLeft isLast={true} />
         </div>
         <SideMiddle />
         <div className="w-1/2 flex flex-col justify-center items-center h-full">
           <SideRight />
           <SideRight />
-          {/* <SideRight /> */}
         </div>
       </MainContainer>
     </div>
