@@ -16,8 +16,8 @@ import { MainContainer } from "../responsive/MainContainer";
 export const Certifications = () => {
   return (
 
-    <MainContainer className="my-40 flex flex-col justify-center items-center gap-y-8">
-      <p className="text-subtitle1-b-d">Certifications</p>
+    <MainContainer className="mt-20 flex flex-col justify-center items-center gap-y-5">
+      <p className="text-h4-b-d">Certifications</p>
        <Swiper
         effect={'cards'}
         grabCursor={true}

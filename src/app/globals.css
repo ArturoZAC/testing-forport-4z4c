@@ -113,6 +113,22 @@
     @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
   }
 
+  .text-h3-b-d {
+    @apply text-[40px] font-bold leading-[1.2] tracking-[-0.01em]
+  }
+
+  .text-h3-r-d {
+    @apply text-[40px] font-normal leading-[1.2] tracking-[-0.01em]
+  }
+
+  .text-h4-b-d {
+    @apply text-[32px] font-bold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h4-r-d {
+    @apply text-[32px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
   .text-subtitle1-b-d {
     @apply text-[28px] font-bold leading-[1.2] tracking-[0em]
   }
