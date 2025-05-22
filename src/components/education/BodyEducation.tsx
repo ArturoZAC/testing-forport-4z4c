@@ -6,10 +6,18 @@ import { SideRight } from "./SideRight"
 export const BodyEducation = () => {
   return (
     <div className="flex w-full justify-center items-center">
-      <MainContainer className="flex justify-center items-center">
-        <SideLeft />
+      <MainContainer className="flex justify-center items-stretch h-auto">
+        <div className="w-1/2 flex flex-col justify-center items-center h-full">
+          <SideLeft />
+          <SideLeft />
+          <SideLeft isLast={true} />
+        </div>
         <SideMiddle />
-        <SideRight />
+        <div className="w-1/2 flex flex-col justify-center items-center h-full">
+          <SideRight />
+          <SideRight />
+          {/* <SideRight /> */}
+        </div>
       </MainContainer>
     </div>
   )
