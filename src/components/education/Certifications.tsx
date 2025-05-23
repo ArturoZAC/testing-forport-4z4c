@@ -16,7 +16,7 @@ import { MainContainer } from "../responsive/MainContainer";
 export const Certifications = () => {
   return (
 
-    <MainContainer className="mt-20 flex flex-col justify-center items-center gap-y-5">
+    <MainContainer className="mt-20 flex flex-col justify-center items-center gap-y-10">
       <p className="text-h4-b-d">Certifications</p>
        <Swiper
         effect={'cards'}

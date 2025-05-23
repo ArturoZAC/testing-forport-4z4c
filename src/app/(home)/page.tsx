@@ -8,9 +8,9 @@ export default function HomePage() {
     <>
     <Hero/>
     <About/>
+    <Education />
     <Skills />
     <Projects />
-    <Education />
     <Contact />
     <Footer />
     </>

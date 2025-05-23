@@ -8,11 +8,11 @@ export const AboutCard = () => {
       <div className="flex flex-col justify-around items-center p-10 h-[inherit]">
         <div className="space-y-6">
           <p className="text-subtitle1-b-d">WHO I AM</p>
-          <p className="text-body-small-r-d text-justify">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt. I am currently furthering my education in the 42 network for a Master Digital IT Architect degree. Coding and problem-solving through code are my passions, and I am excited to collaborate with talented programmers and expand my knowledge even more!</p>
+          <p className="text-body-small-r-d text-justify">💻 As a full-stack developer, I have experience building both front- and back-end platforms. 🧠 I stand out for my ability to solve problems in practical and creative ways. 🔧 Programming is my passion; I enjoy learning new technologies and taking on challenges that push me to improve. 🤝 I&apos;m motivated by working as a team with other talented programmers and continuing to grow every day. 🚀</p>
         </div>
         <div className="flex flex-col gap-y-6">
           <div className="min-h-[3px] bg-neutral-700 w-full"></div>
-          <p className="text-body-small-r-d">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt. </p>
+          <p className="text-body-small-r-d text-justify">🚀 Currently, I continue my passion for programming at Devtalles, actively taking several courses and expanding my knowledge on the same platform. 📚💻</p>
         </div>
       </div>
     </div>

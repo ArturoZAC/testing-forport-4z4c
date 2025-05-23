@@ -17,19 +17,14 @@ export const BodyHero = () => {
           <p>Functional Web Experiences</p>
         </div>
         <div className="text-body-large-r-d text-center text-secondary">
-          <p>Hey, I&apos;m Arturo Araujo, a Full Stack Developer passionate about building </p>
+          <p>Hey, I&apos;m Arturo, a Full Stack Developer passionate about building </p>
           <p>performant, user-friendly, and scalable applications</p>
         </div>
         <div className="text-body-large-r-d flex justify-center text-secondary gap-x-4">
           <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-border">
             Download Cv 📍📄
           </button>
-
-          <button className="bg-primary w-fit px-3 py-2 rounded-full border-3 border-border">
-            Download Cv 📍📄
-          </button>
         </div>
-
         <BackImage />
       </MainContainer>
     </div>
