@@ -6,12 +6,12 @@ export default function HomePage() {
     // <main className="px-6">
     
     <>
-    <Hero/>
+    {/* <Hero/>
     <About/>
     <Education />
     <Skills />
     <Projects />
-    <Contact />
+    <Contact /> */}
     <Footer />
     </>
       
