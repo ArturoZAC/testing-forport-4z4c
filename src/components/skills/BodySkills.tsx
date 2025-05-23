@@ -7,7 +7,7 @@ export const BodySkills = () => {
   return (
     <div className="flex flex-col justify-center items-center overflow-hidden">
       <MainContainer className="flex flex-col gap-y-14">
-        <p className="text-pretty text-body-small-sm-d">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt. I am currently furthering my education in the 42 network for a Master Digital IT Architect degree. Coding and problem-solving through code are my passions, and I am excited to collaborate with talented programmers and expand my knowledge even more!</p>
+        <p className="text-pretty text-body-small-sm-d">Here are the powerful tools and technologies I use to bring your idea to life. From modern front-end frameworks to robust back-end systems, I build comprehensive and scalable solutions tailored to your specific needs. I focus on delivering high-quality, well-structured products with a lasting impact, ensuring a solid experience for both users and clients. Whether you&apos;re starting a new project or improving an existing one, I&apos;m ready to help take it to the next level.</p>
         <div className="overflow-hidden w-full group">
           <div className="flex flex-row animate-scrollSkills w-max gap-x-10 text-white">
             {[...skills, ...skills].map((skill, id) => (
