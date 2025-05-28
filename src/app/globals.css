@@ -202,3 +202,106 @@
   }
 
 }
+
+@layer utilities {
+
+  .text-display-m-m {
+    @apply text-[36px] font-semibold leading-[1.2] tracking-[-0.01em]
+  }
+  
+  .text-h2-sm-m {
+    @apply text-[28px] font-semibold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h2-r-m {
+    @apply text-[28px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h3-b-m {
+    @apply text-[26px] font-bold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h3-r-m {
+    @apply text-[26px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h4-b-m {
+    @apply text-[24px] font-bold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h4-r-m {
+    @apply text-[24px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
+  .text-subtitle1-b-m {
+    @apply text-[22px] font-bold leading-[1.2] tracking-[0em]
+  }
+
+  .text-subtitle1-r-m {
+    @apply text-[22px] font-normal leading-[1.2] tracking-[0em]
+  }
+
+  .text-subtitle2-b-m {
+    @apply text-[20px] font-bold leading-[1.4] tracking-[0em];
+  }
+
+  .text-subtitle2-r-m {
+    @apply text-[20px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-lead-r-m {
+    @apply text-[18px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-lead-b-m {
+    @apply text-[18px] font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-large-r-m {
+    @apply text-[16px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-large-sm-m {
+    @apply text-[16px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-large-b-m {
+    @apply text-[16px] font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-small-r-m {
+    @apply text-[14px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-small-sm-m {
+    @apply text-[14px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
+  .text-body-small-b-m {
+    @apply text-[14px] font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-small-r-m {
+    @apply text-[12px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-small-sm-m {
+    @apply text-[12px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
+  .text-small-b-m {
+    @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-tiny-r-m {
+    @apply text-[11px] font-normal leading-[1.4] tracking-[0em]
+  }
+
+  .text-tiny-sm-m {
+    @apply text-[11px] font-semibold leading-[1.4] tracking-[0em]
+  }
+
+  .text-tiny-b-m {
+    @apply text-[11px] font-bold leading-[1.4] tracking-[0em]
+  }
+}

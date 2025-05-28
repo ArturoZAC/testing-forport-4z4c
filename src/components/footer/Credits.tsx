@@ -6,7 +6,7 @@ export const Credits = () => {
       <span className="border-2 border-border animate-scaleTitle rounded-full"></span>
       <div className="flex flex-row justify-between text-tiny-sm-d">
         <p>4Z4C © 2025. All rights reserved.</p>
-        <p>Designed & Built with ♥ by 4Z4C</p>
+        <p>Designed & Built with 🖤 by 4Z4C</p>
       </div>
     </div>
   );
