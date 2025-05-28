@@ -17,9 +17,20 @@
   --color-fourth-back: #262626;
   --color-border: #404040;
 
+  /* typografy */
+  --text-subtitle-2-d: 24px;
+  --text-subtitle-2-m: 20px;
+  --text-small-d: 14px;
+  --text-small-m: 12px;
+  --text-body-large-d: 18px;
+  --text-body-large-m: 16px;
+  --text-tiny-d: 12px;
+  --text-tiny-m: 11px;
+  
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 1.5s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
+  --breakpoint-xs: 30rem;
   /* --animate-scrollSkills: scrollSkills 10s linear infinite; */
 
   @keyframes colorChange {
@@ -84,15 +95,7 @@
 
 }
 
-@layer utilities {
-  .animate-scrollSkills {
-    animation: scrollSkills 30s linear infinite;
-  }
 
-  .group:hover .animate-scrollSkills {
-    animation-play-state: paused;
-  }
-}
 
 
 @layer components {
@@ -137,11 +140,11 @@
     @apply text-[28px] font-normal leading-[1.2] tracking-[0em]
   }
 
-  .text-subtitle2-b-d {
-    @apply text-[24px] font-bold leading-[1.4] tracking-[0em]
+  .subtitle2-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-subtitle2-r-d {
+  .subtitle2-r {
     @apply text-[24px] font-normal leading-[1.4] tracking-[0em]
   }
 
@@ -153,16 +156,16 @@
     @apply text-[20px] font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-r-d {
-    @apply text-[18px] font-normal leading-[1.4] tracking-[0em]
+  .body-large-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-sm-d {
-    @apply text-[18px] font-semibold leading-[1.4] tracking-[0em]
+  .body-large-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-b-d {
-    @apply text-[18px] font-bold leading-[1.4] tracking-[0em]
+  .body-large-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
   .text-body-small-r-d {
@@ -177,33 +180,29 @@
     @apply text-[16px] font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-small-r-d {
-    @apply text-[14px] font-normal leading-[1.4] tracking-[0em]
+  .small-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-small-sm-d {
-    @apply text-[14px] font-semibold leading-[1.4] tracking-[0em]
+  .small-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-small-b-d {
-    @apply text-[14px] font-bold leading-[1.4] tracking-[0em]
+  .small-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-r-d {
-    @apply text-[12px] font-normal leading-[1.4] tracking-[0em]
+  .tiny-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-sm-d {
-    @apply text-[12px] font-semibold leading-[1.4] tracking-[0em]
+  .tiny-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-b-d {
-    @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
+  .tiny-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
-
-}
-
-@layer utilities {
 
   .text-display-m-m {
     @apply text-[36px] font-semibold leading-[1.2] tracking-[-0.01em]
@@ -241,32 +240,12 @@
     @apply text-[22px] font-normal leading-[1.2] tracking-[0em]
   }
 
-  .text-subtitle2-b-m {
-    @apply text-[20px] font-bold leading-[1.4] tracking-[0em];
-  }
-
-  .text-subtitle2-r-m {
-    @apply text-[20px] font-normal leading-[1.4] tracking-[0em]
-  }
-
   .text-lead-r-m {
     @apply text-[18px] font-normal leading-[1.4] tracking-[0em]
   }
 
   .text-lead-b-m {
     @apply text-[18px] font-bold leading-[1.4] tracking-[0em]
-  }
-
-  .text-body-large-r-m {
-    @apply text-[16px] font-normal leading-[1.4] tracking-[0em]
-  }
-
-  .text-body-large-sm-m {
-    @apply text-[16px] font-semibold leading-[1.4] tracking-[0em]
-  }
-
-  .text-body-large-b-m {
-    @apply text-[16px] font-bold leading-[1.4] tracking-[0em]
   }
 
   .text-body-small-r-m {
@@ -281,27 +260,15 @@
     @apply text-[14px] font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-small-r-m {
-    @apply text-[12px] font-normal leading-[1.4] tracking-[0em]
+}
+
+@layer utilities {
+  .animate-scrollSkills {
+    animation: scrollSkills 30s linear infinite;
   }
 
-  .text-small-sm-m {
-    @apply text-[12px] font-semibold leading-[1.4] tracking-[0em]
+  .group:hover .animate-scrollSkills {
+    animation-play-state: paused;
   }
 
-  .text-small-b-m {
-    @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
-  }
-
-  .text-tiny-r-m {
-    @apply text-[11px] font-normal leading-[1.4] tracking-[0em]
-  }
-
-  .text-tiny-sm-m {
-    @apply text-[11px] font-semibold leading-[1.4] tracking-[0em]
-  }
-
-  .text-tiny-b-m {
-    @apply text-[11px] font-bold leading-[1.4] tracking-[0em]
-  }
 }
