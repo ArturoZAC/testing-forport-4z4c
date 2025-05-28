@@ -7,7 +7,7 @@ const svgs = [
   },
   {
     link: "/b",
-    id: "ig"
+    id: "instagram"
   },
   {
     link: "/c",
@@ -29,8 +29,12 @@ export const MainFoot = () => {
       <div className="flex flex-row gap-x-8">
         {
           svgs.map( ( svg ) => (
-            <Link href={svg.link} key={svg.link} className="bg-primary p-2 size-10 max-md:size-8 flex items-center justify-center rounded-full">
-              <svg className="w-5 h-5 max-md:w-4 max-md:h-4">
+            <Link href={svg.link} key={svg.link} className="flex items-center justify-center rounded-full">
+              <svg className={
+                svg.id === 'twitter' 
+                  ? "w-[22px] h-[22px] max-md:w-[16px] max-md:h-[16px]"
+                  : "w-[26px] h-[26px] max-md:w-[20px] max-md:h-[20px]"
+                }>
                 <use xlinkHref={`/assets/sprite.svg#${svg.id}`} />
               </svg>
             </Link>
