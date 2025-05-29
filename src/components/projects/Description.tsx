@@ -2,11 +2,11 @@ import { Tech } from "./Tech";
 
 export const Description = () => {
   return (
-    <div className="bg-blue-400 w-full max-w-[524px] rounded-4xl overflow-hidden px-7 py-5 ">
-      <div className="flex flex-col gap-y-4">
+    <div className="bg-blue-400 w-full max-w-[524px] max-lg:max-w-full rounded-4xl overflow-hidden">
+      <div className="flex flex-col gap-y-4 px-7 py-5">
         <div className="space-y-3">
-          <p className="text-subtitle2-b-d">Title</p>
-          <div className="flex gap-x-10 text-body-large-sm-d">
+          <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>
+          <div className="flex gap-x-10 body-large-sm text-body-large-d max-md:text-body-large-m">
             <div className="flex justify-center items-center gap-x-3">
               <div className="size-[35px] bg-purple-500"></div>
               <p>Demo</p>
@@ -17,10 +17,10 @@ export const Description = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-3">
-          <p className="break-words">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.</p>
+        <div className="space-y-3 body-small-r text-body-small-d max-md:text-body-small-m">
+          <p className="break-words text-pretty">As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.</p>
         </div>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-4 gap-2 max-sm:grid-cols-3">
           <Tech />
           <Tech />
           <Tech />

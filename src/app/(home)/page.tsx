@@ -11,7 +11,7 @@ export default function HomePage() {
     {/* <Education /> */}
     {/* <Skills /> */}
     {/* <Projects /> */}
-    <Contact />
+    {/* <Contact /> */}
     {/* <Footer /> */}
     </>
       
