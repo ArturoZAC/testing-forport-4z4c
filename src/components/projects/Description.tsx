@@ -2,7 +2,10 @@ import { Tech } from "./Tech";
 
 export const Description = () => {
   return (
-    <div className="bg-blue-400 w-full max-w-[524px] max-lg:max-w-full rounded-4xl overflow-hidden">
+    <div className="bg-fourth w-full max-w-1/2 max-middle:max-w-full rounded-4xl overflow-hidden"/*  style={{
+      backgroundColor: 'rgba(255,255,255,0.3)',
+      backdropFilter: "blur(12px) saturate(1.5)"
+    }} */>
       <div className="flex flex-col gap-y-4 px-7 py-5">
         <div className="space-y-3">
           <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>

@@ -10,9 +10,9 @@ export default function HomePage() {
     {/* <About/> */}
     {/* <Education /> */}
     {/* <Skills /> */}
-    {/* <Projects /> */}
-    {/* <Contact /> */}
-    {/* <Footer /> */}
+    <Projects />
+    <Contact />
+    <Footer />
     </>
       
   );
