@@ -3,17 +3,9 @@ import { Tech } from "./Tech";
 export const Description = () => {
   return (
     <div className="relative w-full max-w-1/2 max-middle:max-w-full">
-      
-      
-      <div className="absolute bottom-3 right-3 size-20 rounded-full z-0 
-      bg-radial-[ellipse_at_50%_75%] from-sky-200 via-blue-400 to-indigo-900" />
-
-
-      <div className="absolute top-3 -right-20 size-20 rounded-full z-0 
-      bg-radial-[ellipse_at_50%_75%] from-sky-200 via-blue-400 to-indigo-900" />
-
-
-      <div className="w-full bg-fourth/40 rounded-4xl relative backdrop-blur-md backdrop-saturate-150 z-10">
+      <div className="absolute top-3 right-3 h-20 w-25 rounded-full z-0 
+      bg-radial-[ellipse_at_50%_75%] from-violet-600 to-fuchsia-600 max-lg:w-20 max-sm:w-15 max-sm:h-15" />
+      <div className="w-full bg-fourth/40 rounded-4xl relative backdrop-blur-[10px] backdrop-saturate-150 z-10">
         <div className="flex flex-col gap-y-4 px-7 py-5">
           <div className="space-y-3">
             <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>
