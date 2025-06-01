@@ -8,10 +8,10 @@ export default function HomePage() {
     <>
     {/* <Hero/> */}
     {/* <About/> */}
-    {/* <Education /> */}
+    <Education />
     {/* <Skills /> */}
-    <Projects />
-    <Contact />
+    {/* <Projects /> */}
+    {/* <Contact /> */}
     {/* <Footer /> */}
     </>
       
