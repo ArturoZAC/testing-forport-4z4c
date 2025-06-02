@@ -78,6 +78,7 @@
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-montserrat);
+    overflow-x: hidden !important;
   }
   button {
     cursor: pointer;
