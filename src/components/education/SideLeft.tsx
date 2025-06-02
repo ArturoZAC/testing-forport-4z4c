@@ -1,4 +1,3 @@
-
 interface Props {
   isLast?: boolean;
   title?: string;
@@ -14,12 +13,14 @@ export const SideLeft = (
     title = "Frontend Developer"
   }: Props) => {
   return (
-      <div className={`flex flex-col max-w-[416px] items-end gap-y-4 ${isLast ? '' : 'mb-50'}`}>
+      <div className={`flex flex-col w-full max-w-[440px] items-end gap-y-4 ${isLast ? '' : 'mb-50'} bg-fourth/60 py-4 px-6 rounded-2xl
+        max-md:w-full
+      `}>
         <div className='flex flex-col gap-y-1 items-end'>
-          <p className='text-subtitle2-b-d'>{title}</p>
-          <p className='text-tiny-r-d'>{date}</p>
+          <p className='subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m'>{title}</p>
+          <p className='tiny-r text-tiny-d max-md:text-tiny-m'>{date}</p>
         </div>
-        <p className='text-pretty'>{description}</p>
+        <p className='text-pretty body-small-r text-body-small-d max-md:text-body-small-m'>{description}</p>
       </div>
   )
 }

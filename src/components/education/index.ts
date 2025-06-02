@@ -3,3 +3,4 @@ export * from './SideLeft';
 export * from './SideRight';
 export * from './SideMiddle';
 export * from './Certifications';
+export * from './CardFull';

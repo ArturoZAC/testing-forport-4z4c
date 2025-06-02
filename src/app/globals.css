@@ -20,6 +20,8 @@
   /* typografy */
   --text-h2-d: 48px;
   --text-h2-m: 28px;
+  --text-h4-d: 32px;
+  --text-h4-m: 24px;
   --text-subtitle-1-d: 28px;
   --text-subtitle-1-m: 22px;
   --text-subtitle-2-d: 24px;
@@ -133,12 +135,12 @@
     @apply text-[40px] font-normal leading-[1.2] tracking-[-0.01em]
   }
 
-  .text-h4-b-d {
-    @apply text-[32px] font-bold leading-[1.2] tracking-[0rem]
+  .h4-b {
+    @apply font-bold leading-[1.2] tracking-[0rem]
   }
 
-  .text-h4-r-d {
-    @apply text-[32px] font-normal leading-[1.2] tracking-[0rem]
+  .h4-r {
+    @apply font-normal leading-[1.2] tracking-[0rem]
   }
 
   .subtitle1-b {
