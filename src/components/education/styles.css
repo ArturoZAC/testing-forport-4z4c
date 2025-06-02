@@ -1,7 +1,7 @@
 .swiper {
   width: 100%;
   max-width: 450px;
-  aspect-ratio: 10 / 7;
+  aspect-ratio: 3/ 2;
   overflow: visible;
   position: relative;
 }
@@ -72,6 +72,12 @@
   position: relative;
 }
 
-/* html, body {
-  overflow-x: hidden !important;
-} */
+@media (max-width: 768px) {
+  .swiper-pagination {
+    bottom: -10px !important; 
+  }
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+}

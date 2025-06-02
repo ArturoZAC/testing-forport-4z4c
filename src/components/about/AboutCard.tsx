@@ -3,7 +3,7 @@ export const AboutCard = () => {
 
   return (
     <div className="relative bg-neutral-900 w-full max-w-1/2 h-[600px] rounded-4xl 
-     before:bg-linear-to-r before:from-violet-600 before:to-fuchsia-600 before:w-full before:max-w-[584px] before:min-h-[600px] before:absolute before:right-2 before:rounded-[34px] before:rotate-[-4deg] before:-z-10
+     before:bg-linear-to-r before:from-violet-600 before:to-fuchsia-600 before:w-full before:max-w-[584px] before:min-h-[600px] before:absolute before:right-1 before:rounded-[34px] before:rotate-[-2deg] before:-z-10
     ">
       <div className="flex flex-col justify-around items-center p-10 h-[inherit]">
         <div className="space-y-6">
