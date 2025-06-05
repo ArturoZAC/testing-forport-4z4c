@@ -6,13 +6,13 @@ export default function HomePage() {
     // <main className="px-6">
     
     <>
-    {/* <Hero/> */}
-    <About/>
-    {/* <Education /> */}
-    {/* <Skills /> */}
-    {/* <Projects /> */}
-    {/* <Contact /> */}
-    {/* <Footer /> */}
+    <Hero/>
+    {/* <About/>
+    <Education />
+    <Skills />
+    <Projects />
+    <Contact />
+    <Footer /> */}
     </>
       
   );
