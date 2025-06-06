@@ -13,7 +13,7 @@
   --color-third: #A31AEF;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
-  --color-fourth: #171717;
+  --color-fourth: #0E0E0E;
   --color-fourth-back: #262626;
   --color-border: #404040;
 
@@ -113,7 +113,7 @@
 @layer components {
 
   .input-custom {
-    @apply rounded-md bg-fourth h-full outline-none border-3 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
+    @apply rounded-md bg-fourth h-full outline-none border-2 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
   }
 
   .text-display-m-d {

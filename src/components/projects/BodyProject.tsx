@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MainContainer } from "../responsive/MainContainer"
+import { MainContainer } from "../responsive/MainContainer" 
 import { Description } from "./Description";
 
 export const BodyProject = () => {

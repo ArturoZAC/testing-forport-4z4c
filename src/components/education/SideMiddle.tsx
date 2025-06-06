@@ -5,7 +5,7 @@ export const SideMiddle = () => {
   return (
     <div className="max-md:hidden">
       <div className="w-10 flex justify-center h-full">
-        <div className="h-auto bg-border w-1 flex flex-col items-center">
+        <div className="h-auto bg-border/50 w-1 flex flex-col items-center">
         {Array.from({ length: numDots }).map((_, index) => (
           <div
             key={index}

@@ -2,7 +2,7 @@
 export const AboutCard = () => {
 
   return (
-    <div className="relative bg-neutral-900 w-full max-w-1/2 max-md:max-w-full  h-[600px] rounded-4xl 
+    <div className="relative bg-fourth w-full max-w-1/2 max-md:max-w-full  h-[600px] rounded-4xl 
      before:bg-linear-to-r before:from-violet-600 before:to-fuchsia-600 before:w-full before:max-w-[584px] max-md:before:max-w-full before:min-h-[600px] before:absolute before:right-1 before:rounded-[34px] before:rotate-[-2deg] before:-z-10
     ">
       <div className="flex flex-col justify-around items-center p-10 h-[inherit] max-middle:p-8 body-small-r text-body-small-d max-md:text-body-small-m">

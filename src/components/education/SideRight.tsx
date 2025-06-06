@@ -14,7 +14,7 @@ export const SideRight = (
     title = "Frontend Developer"
   }: Props) => {
   return (
-      <div className={`flex flex-col max-w-[440px] items-start gap-y-4 mt-50 ${isLast ? 'mt-0' : ''} bg-fourth/60 py-4 px-6 rounded-2xl`}>
+      <div className={`flex flex-col max-w-[440px] items-start gap-y-4 mt-50 ${isLast ? 'mt-0' : ''} bg-fourth py-4 px-6 rounded-2xl`}>
         <div className='flex flex-col gap-y-1 items-start'>
           <p className='subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m'>{title}</p>
           <p className='tiny-r text-tiny-d max-md:text-tiny-m'>{date}</p>
