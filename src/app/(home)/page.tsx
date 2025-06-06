@@ -7,12 +7,12 @@ export default function HomePage() {
     
     <>
     {/* <Hero/> */}
-    <About/>
-    <Education />
+    {/* <About/> */}
+    {/* <Education /> */}
     <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
+    {/* <Projects /> */}
+    {/* <Contact /> */}
+    {/* <Footer /> */}
     </>
       
   );
