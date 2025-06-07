@@ -11,7 +11,9 @@ export const Description = () => {
             <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>
             <div className="flex gap-x-10 body-large-sm text-body-large-d max-md:text-body-large-m">
               <div className="flex justify-center items-center gap-x-3">
-                <div className="size-[35px] bg-purple-500"></div>
+                <svg className="w-6 h-6">
+                  <use xlinkHref={`/assets/sprite.svg#demo`} />
+                </svg>
                 <p>Demo</p>
               </div>
               <div className="flex justify-center items-center gap-x-3">
