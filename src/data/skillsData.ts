@@ -27,5 +27,4 @@ export const svgsSkills = [
   { id: "firebase", name: "Firebase" },
   { id: "docker", name: "Docker" },
   { id: "cloudinary", name: "Cloudinary" },
-  { id: "tanStack", name: "TanStack" }
 ];

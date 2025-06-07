@@ -15,15 +15,15 @@ export const BodySkills = () => {
             {[...svgsSkills, ...svgsSkills].map((skill, id) => (
                 <div
                   key={id}
-                  className="size-[150px] max-md:size-[125px] max-sm:size-[100px] flex flex-col justify-center items-center gap-y-6 bg-fourth border-2 border-neutral-700 rounded-md"
+                  className="size-[135px] max-md:size-[125px] max-sm:size-[100px] flex flex-col justify-center items-center gap-y-6 max-md:gap-y-4 bg-fourth border-2 border-neutral-700 rounded-md"
                 >
                   {/* <div className="size-[50px] flex justify-center items-center">
                     Icon
                   </div> */}
-                  <svg className="w-9 h-9">
+                  <svg className="w-9 h-9 max-md:w-7 max-md:h-7">
                     <use xlinkHref={`/assets/sprite.svg#${skill.id}`}/>
                   </svg>
-                  <p>{ skill.name }</p>
+                  <p className="small-sm text-small-d max-md:text-small-m">{ skill.name }</p>
                 </div>
             ))}
           </div>
