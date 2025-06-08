@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Tech } from "./Tech";
 
 export const Description = () => {
@@ -10,20 +11,22 @@ export const Description = () => {
           <div className="space-y-3">
             <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>
             <div className="flex gap-x-10 body-large-sm text-body-large-d max-md:text-body-large-m">
-              <div className="flex justify-center items-center gap-x-3">
+              <Link href={"/"} className="flex justify-center items-center gap-x-3">
                 <svg className="w-6 h-6">
                   <use xlinkHref={`/assets/sprite.svg#demo`} />
                 </svg>
                 <p>Demo</p>
-              </div>
-              <div className="flex justify-center items-center gap-x-3">
-                <div className="size-[35px] bg-purple-500"></div>
+              </Link>
+              <Link href={"/"} className="flex justify-center items-center gap-x-3">
+                <svg className="w-6 h-6">
+                  <use xlinkHref={`/assets/sprite.svg#github`} />
+                </svg>
                 <p>Code</p>
-              </div>
+              </Link>
             </div>
           </div>
           <div className="space-y-3 body-small-r text-body-small-d max-md:text-body-small-m">
-            <p className="break-words text-pretty">
+            <p className="break-words text-justify">
               As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.
             </p>
           </div>
