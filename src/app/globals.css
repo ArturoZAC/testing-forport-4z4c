@@ -44,6 +44,8 @@
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 1.5s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
+  --animate-slide-in-navbar: slide-in-navbar 0.5s ease-in-out forwards;
+  --animate-slide-out-navbar: slide-out-navbar 0.5s ease-in-out forwards;
   --breakpoint-xs: 30rem;
   --breakpoint-middle: 55rem;
   /* --animate-scrollSkills: scrollSkills 10s linear infinite; */
@@ -74,6 +76,24 @@
   @keyframes scrollSkills {
     to { transform: translateX(calc( -50% - 20px )); }
   }
+
+  @keyframes slide-in-navbar {
+    0% { 
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out-navbar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
     
 }
 
