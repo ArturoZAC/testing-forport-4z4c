@@ -1,6 +1,9 @@
 .swiper {
-  width: 550px;
-  height: 400px;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 3/ 2;
+  overflow: visible;
+  position: relative;
 }
 
 .swiper-slide {
@@ -67,4 +70,14 @@
 .swiper-pagination {
   bottom: -20px !important; 
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+    bottom: -10px !important; 
+  }
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
 }

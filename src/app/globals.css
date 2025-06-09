@@ -13,13 +13,41 @@
   --color-third: #A31AEF;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
-  --color-fourth: #171717;
+  --color-fourth: #0E0E0E;
   --color-fourth-back: #262626;
   --color-border: #404040;
 
+  /* typografy */
+  --text-display-d: 64px;
+  --text-display-m: 36px;
+  --text-h1-d: 56px;
+  --text-h1-m: 30px;
+  --text-h2-d: 48px;
+  --text-h2-m: 28px;
+  --text-h4-d: 32px;
+  --text-h4-m: 24px;
+  --text-subtitle-1-d: 28px;
+  --text-subtitle-1-m: 22px;
+  --text-subtitle-2-d: 24px;
+  --text-subtitle-2-m: 20px;
+  --text-lead-d: 20px;
+  --text-lead-m: 18px;
+  --text-body-large-d: 18px;
+  --text-body-large-m: 16px;
+  --text-body-small-d: 16px;
+  --text-body-small-m: 14px;
+  --text-small-d: 14px;
+  --text-small-m: 12px;
+  --text-tiny-d: 12px;
+  --text-tiny-m: 11px;
+  
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 1.5s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
+  --animate-slide-in-navbar: slide-in-navbar 0.5s ease-in-out forwards;
+  --animate-slide-out-navbar: slide-out-navbar 0.5s ease-in-out forwards;
+  --breakpoint-xs: 30rem;
+  --breakpoint-middle: 55rem;
   /* --animate-scrollSkills: scrollSkills 10s linear infinite; */
 
   @keyframes colorChange {
@@ -48,6 +76,24 @@
   @keyframes scrollSkills {
     to { transform: translateX(calc( -50% - 20px )); }
   }
+
+  @keyframes slide-in-navbar {
+    0% { 
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out-navbar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
     
 }
 
@@ -56,6 +102,7 @@
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-montserrat);
+    overflow-x: hidden !important;
   }
   button {
     cursor: pointer;
@@ -84,33 +131,29 @@
 
 }
 
-@layer utilities {
-  .animate-scrollSkills {
-    animation: scrollSkills 30s linear infinite;
-  }
 
-  .group:hover .animate-scrollSkills {
-    animation-play-state: paused;
-  }
-}
 
 
 @layer components {
 
   .input-custom {
-    @apply rounded-md bg-fourth h-full outline-none border-3 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
+    @apply rounded-md bg-fourth h-full outline-none border-2 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
   }
 
-  .text-display-m-d {
-    @apply text-[64px] font-semibold leading-[1.2] tracking-[-0.02em]
+  .display-sm {
+    @apply font-semibold leading-[1.2] tracking-[-0.02em]
+  }
+
+  .h1-sm {
+    @apply font-semibold leading-[1.2] tracking-[-0.02em]
   }
   
-  .text-h2-sm-d {
-    @apply text-[48px] font-semibold leading-[1.2] tracking-[-0.01em]
+  .h2-sm {
+    @apply font-semibold leading-[1.2] tracking-[-0.01em]
   }
 
-  .text-h2-r-d {
-    @apply text-[48px] font-normal leading-[1.2] tracking-[-0.01em]
+  .h2-r {
+    @apply font-normal leading-[1.2] tracking-[-0.01em]
   }
 
   .text-h3-b-d {
@@ -121,84 +164,115 @@
     @apply text-[40px] font-normal leading-[1.2] tracking-[-0.01em]
   }
 
-  .text-h4-b-d {
-    @apply text-[32px] font-bold leading-[1.2] tracking-[0rem]
+  .h4-b {
+    @apply font-bold leading-[1.2] tracking-[0rem]
   }
 
-  .text-h4-r-d {
-    @apply text-[32px] font-normal leading-[1.2] tracking-[0rem]
+  .h4-r {
+    @apply font-normal leading-[1.2] tracking-[0rem]
   }
 
-  .text-subtitle1-b-d {
-    @apply text-[28px] font-bold leading-[1.2] tracking-[0em]
+  .subtitle1-b {
+    @apply font-bold leading-[1.2] tracking-[0em]
   }
 
-  .text-subtitle1-r-d {
-    @apply text-[28px] font-normal leading-[1.2] tracking-[0em]
+  .subtitle1-r {
+    @apply font-normal leading-[1.2] tracking-[0em]
   }
 
-  .text-subtitle2-b-d {
-    @apply text-[24px] font-bold leading-[1.4] tracking-[0em]
+  .subtitle2-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-subtitle2-r-d {
+  .subtitle2-r {
     @apply text-[24px] font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-lead-r-d {
-    @apply text-[20px] font-normal leading-[1.4] tracking-[0em]
+  .lead-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-lead-b-d {
-    @apply text-[20px] font-bold leading-[1.4] tracking-[0em]
+  .lead-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-r-d {
-    @apply text-[18px] font-normal leading-[1.4] tracking-[0em]
+  .body-large-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-sm-d {
-    @apply text-[18px] font-semibold leading-[1.4] tracking-[0em]
+  .body-large-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-large-b-d {
-    @apply text-[18px] font-bold leading-[1.4] tracking-[0em]
+  .body-large-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-small-r-d {
-    @apply text-[16px] font-normal leading-[1.4] tracking-[0em]
+  .body-small-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-body-small-sm-d {
-    @apply text-[16px] font-semibold leading-[1.4] tracking-[0em]
+  .body-small-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-body-small-b-d {
-    @apply text-[16px] font-bold leading-[1.4] tracking-[0em]
+  .body-small-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-small-r-d {
-    @apply text-[14px] font-normal leading-[1.4] tracking-[0em]
+  .small-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-small-sm-d {
-    @apply text-[14px] font-semibold leading-[1.4] tracking-[0em]
+  .small-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-small-b-d {
-    @apply text-[14px] font-bold leading-[1.4] tracking-[0em]
+  .small-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-r-d {
-    @apply text-[12px] font-normal leading-[1.4] tracking-[0em]
+  .tiny-r {
+    @apply font-normal leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-sm-d {
-    @apply text-[12px] font-semibold leading-[1.4] tracking-[0em]
+  .tiny-sm {
+    @apply font-semibold leading-[1.4] tracking-[0em]
   }
 
-  .text-tiny-b-d {
-    @apply text-[12px] font-bold leading-[1.4] tracking-[0em]
+  .tiny-b {
+    @apply font-bold leading-[1.4] tracking-[0em]
+  }
+
+  .text-display-m-m {
+    @apply text-[36px] font-semibold leading-[1.2] tracking-[-0.01em]
+  }
+
+  .text-h3-b-m {
+    @apply text-[26px] font-bold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h3-r-m {
+    @apply text-[26px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h4-b-m {
+    @apply text-[24px] font-bold leading-[1.2] tracking-[0rem]
+  }
+
+  .text-h4-r-m {
+    @apply text-[24px] font-normal leading-[1.2] tracking-[0rem]
+  }
+
+}
+
+@layer utilities {
+  .animate-scrollSkills {
+    animation: scrollSkills 30s linear infinite;
+  }
+
+  .group:hover .animate-scrollSkills {
+    animation-play-state: paused;
   }
 
 }
