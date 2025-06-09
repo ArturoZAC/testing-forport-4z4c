@@ -18,6 +18,10 @@
   --color-border: #404040;
 
   /* typografy */
+  --text-display-d: 64px;
+  --text-display-m: 36px;
+  --text-h1-d: 56px;
+  --text-h1-m: 30px;
   --text-h2-d: 48px;
   --text-h2-m: 28px;
   --text-h4-d: 32px;
@@ -116,8 +120,12 @@
     @apply rounded-md bg-fourth h-full outline-none border-2 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
   }
 
-  .text-display-m-d {
-    @apply text-[64px] font-semibold leading-[1.2] tracking-[-0.02em]
+  .display-sm {
+    @apply font-semibold leading-[1.2] tracking-[-0.02em]
+  }
+
+  .h1-sm {
+    @apply font-semibold leading-[1.2] tracking-[-0.02em]
   }
   
   .h2-sm {
