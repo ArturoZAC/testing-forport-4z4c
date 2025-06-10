@@ -14,8 +14,7 @@ export const SideLeft = (
   }: Props) => {
   return (
       <div className={`flex flex-col w-full max-w-[440px] items-end gap-y-4 ${isLast ? '' : 'mb-50'} bg-fourth py-4 px-6 rounded-2xl
-        max-md:w-full
-      `}>
+        max-md:w-full`}>
         <div className='flex flex-col gap-y-1 items-end'>
           <p className='subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m'>{title}</p>
           <p className='tiny-r text-tiny-d max-md:text-tiny-m'>{date}</p>

@@ -45,6 +45,7 @@
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
   --animate-slide-in-navbar: slide-in-navbar 0.5s ease-in-out forwards;
   --animate-slide-out-navbar: slide-out-navbar 0.5s ease-in-out forwards;
+  --animate-opacity-about: opacity-about 1s infinite ease-in-out alternate;
   --breakpoint-xs: 30rem;
   --breakpoint-middle: 55rem;
   /* --animate-scrollSkills: scrollSkills 10s linear infinite; */
@@ -86,13 +87,22 @@
   }
 
   @keyframes slide-out-navbar {
-  0% {
-    transform: translateX(0);
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
-  100% {
-    transform: translateX(-100%);
+
+  @keyframes opacity-about {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.2;
+    }
   }
-}
     
 }
 
