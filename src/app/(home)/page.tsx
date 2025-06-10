@@ -8,9 +8,9 @@ export default function HomePage() {
     <>
     {/* <Hero/> */}
     {/* <About/> */}
-    {/* <Education /> */}
+    <Education />
     {/* <Skills /> */}
-    <Projects />
+    {/* <Projects /> */}
     {/* <Contact /> */}
     {/* <Footer /> */}
     </>
