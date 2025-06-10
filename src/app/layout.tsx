@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.className} antialiased text-secondary`}
+        className={`${montserrat.className} antialiased text-secondary scroll-smooth`}
       >
         {children}
       </body>

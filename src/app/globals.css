@@ -4,7 +4,6 @@
   --color-background: #010101;
   --color-foreground: white;
   --font-montserrat: var(--font-montserrat);
-
 }
 
 @theme {
@@ -98,6 +97,11 @@
 }
 
 @layer base {
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: var(--color-background);
     color: var(--color-foreground);
@@ -130,9 +134,6 @@
   }
 
 }
-
-
-
 
 @layer components {
 
