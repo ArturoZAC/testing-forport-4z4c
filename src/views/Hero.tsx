@@ -3,7 +3,7 @@ import { NavBar } from "@/components/ui";
 
 export const Hero = () => {
   return (
-    <section className="px-6">
+    <section id="#home" className="px-6">
       <NavBar />
       <BodyHero />
     </section> 
