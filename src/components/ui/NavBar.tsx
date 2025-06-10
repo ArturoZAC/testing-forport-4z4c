@@ -2,16 +2,43 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { MainContainer } from "../responsive/MainContainer";
 import { links } from "@/data/linksData";
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState('/');
 
+  const [activeLink, setActiveLink] = useState('/');
   const [isMenuPressed, setIsMenuPressed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            if (id && activeLink !== `#${id}`) {
+              setActiveLink(`#${id}`);
+            }
+          }
+        });
+      },
+      {
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, [ activeLink ]);
 
   const toggleMenu = () => {
     if (isMenuPressed) {
@@ -30,8 +57,7 @@ export const NavBar = () => {
   };
 
   return (
-    // <div className="flex flex-col items-center justify-center mt-[10px]">
-    <div className="fixed top-[10px] left-0 w-full z-50 flex flex-col items-center justify-center"> 
+    <div className="fixed top-[10px] left-0 w-full z-50 flex flex-col items-center justify-center px-6"> 
       <MainContainer className="h-[60px] max-md:h-[50px] rounded-2xl flex px-6 py-4 max-md:px-3 max-md:py-2 justify-between bg-primary border-2 border-neutral-700">
         <div className="flex justify-center items-center">
           <Link href="/">
@@ -117,7 +143,7 @@ export const NavBar = () => {
                       key={link.path}
                       className={`text-secondary body-large text-body-large-m underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''}`}
                     >
-                      <Link href="/" onClick={() => {
+                      <Link href={link.path} onClick={() => {
                         handleLinkClick(link.path);
                         toggleMenu();
                       }}>
