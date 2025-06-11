@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 export const Form = () => {
 
@@ -37,7 +38,11 @@ export const Form = () => {
 
       setFormData({ name: "", email: "", message: "" });
 
-      alert("Mensaje enviado con éxito");
+      toast.success("Mensaje enviado", {
+        duration: 2000,
+        position: 'bottom-center',
+        className: '!bg-fourth-back !text-white'
+      });
     } catch {
       alert("Hubo un error al enviar el mensaje");
     }
@@ -94,6 +99,7 @@ export const Form = () => {
         >
           {isSubmitting ? "Sending..." : "Send"}
         </button>
+        <Toaster  />
       </form>
     </div>
   );
