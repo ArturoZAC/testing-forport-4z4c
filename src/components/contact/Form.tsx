@@ -10,7 +10,7 @@ export const Form = () => {
     message: "",
   });
 
-  const [isActive, setIsActive] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,6 +23,7 @@ export const Form = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting( true );
 
     try {
       await fetch("https://formsubmit.co/ajax/arturoyz2105@gmail.com", {
@@ -37,14 +38,11 @@ export const Form = () => {
       setFormData({ name: "", email: "", message: "" });
 
       alert("Mensaje enviado con éxito");
-      setTimeout( () => {
-        setIsActive(true);
-      }, 1000)
     } catch {
       alert("Hubo un error al enviar el mensaje");
     }
 
-    setIsActive(false);
+    setIsSubmitting(false);
   };
   return (
     <div className="w-full max-w-1/2 max-md:max-w-full h-auto">
@@ -59,7 +57,6 @@ export const Form = () => {
             value={formData.name}
             onChange={handleChange}
             className="px-4 min-h-11 input-custom"
-            required
           />
         </div>
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
@@ -72,7 +69,6 @@ export const Form = () => {
             value={formData.email}
             onChange={handleChange}
             className="px-4 min-h-11 input-custom"
-            required
           />
         </div>
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
@@ -84,15 +80,19 @@ export const Form = () => {
             value={formData.message}
             onChange={handleChange}
             className="p-4 min-h-40 resize-none input-custom"
-            required
           ></textarea>
         </div>
         <button
           type="submit"
-          className="h-full min-h-12 bg-linear-to-l from-violet-600 to-fuchsia-600 rounded-md lead-b text-lead-d max-md:text-lead-m hover:from-violet-900 hover:to-fuchsia-900 transition-colors duration-300"
-          disabled={ isActive }
+          className={`h-full min-h-12 rounded-md lead-b text-lead-d max-md:text-lead-m transition-colors duration-300
+            ${
+              isSubmitting
+                ? "bg-linear-to-l from-violet-900 to-fuchsia-900"
+                : "bg-gradient-to-l from-violet-600 to-fuchsia-600"
+            }`}
+          disabled={ isSubmitting }
         >
-          Send
+          {isSubmitting ? "Sending..." : "Send"}
         </button>
       </form>
     </div>

@@ -3,17 +3,14 @@ import { About, Contact, Education, Footer, Hero, Projects, Skills } from "@/vie
 export default function HomePage() {
 
   return (
-    // <main className="px-6">
-    
     <>
-    {/* <Hero/> */}
-    {/* <About/> */}
-    {/* <Education /> */}
-    {/* <Skills /> */}
-    {/* <Projects /> */}
+    <Hero/>
+    <About/>
+    <Education />
+    <Skills />
+    <Projects />
     <Contact />
-    {/* <Footer /> */}
+    <Footer />
     </>
-      
   );
 }
