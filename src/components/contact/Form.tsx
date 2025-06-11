@@ -10,6 +10,8 @@ export const Form = () => {
     message: "",
   });
 
+  const [isActive, setIsActive] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -35,9 +37,14 @@ export const Form = () => {
       setFormData({ name: "", email: "", message: "" });
 
       alert("Mensaje enviado con éxito");
+      setTimeout( () => {
+        setIsActive(true);
+      }, 1000)
     } catch {
       alert("Hubo un error al enviar el mensaje");
     }
+
+    setIsActive(false);
   };
   return (
     <div className="w-full max-w-1/2 max-md:max-w-full h-auto">
@@ -51,7 +58,7 @@ export const Form = () => {
             id="name"
             value={formData.name}
             onChange={handleChange}
-            className="px-4 min-h-12 input-custom"
+            className="px-4 min-h-11 input-custom"
             required
           />
         </div>
@@ -64,7 +71,7 @@ export const Form = () => {
             id="email"
             value={formData.email}
             onChange={handleChange}
-            className="px-4 min-h-12 input-custom"
+            className="px-4 min-h-11 input-custom"
             required
           />
         </div>
@@ -83,6 +90,7 @@ export const Form = () => {
         <button
           type="submit"
           className="h-full min-h-12 bg-linear-to-l from-violet-600 to-fuchsia-600 rounded-md lead-b text-lead-d max-md:text-lead-m hover:from-violet-900 hover:to-fuchsia-900 transition-colors duration-300"
+          disabled={ isActive }
         >
           Send
         </button>

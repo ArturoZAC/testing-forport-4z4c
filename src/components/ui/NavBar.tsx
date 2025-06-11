@@ -120,7 +120,7 @@ export const NavBar = () => {
               </svg>
             </button>
             {(isMenuPressed || isClosing) && (
-              <div className={`fixed top-0 left-0 w-full h-screen bg-fourth z-50 flex flex-col p-6 gap-6 border-r-2 border-neutral-700 md:hidden ${isClosing ? 'animate-slide-out-navbar' : 'animate-slide-in-navbar'}`}>
+              <div className={`fixed top-0 left-0 w-full h-screen bg-fourth z-50 flex flex-col p-6 gap-6 md:hidden ${isClosing ? 'animate-slide-out-navbar' : 'animate-slide-in-navbar'}`}>
                 <div className="flex justify-end">
                   <button
                     className="group w-8 h-8 text-slate-800 bg-gradient-to-r from-violet-700 to-fuchsia-700 text-center items-center justify-center rounded shadow hover:shadow transition flex"
