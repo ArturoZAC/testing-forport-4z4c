@@ -3,8 +3,6 @@ import { About, Contact, Education, Footer, Hero, Projects, Skills } from "@/vie
 export default function HomePage() {
 
   return (
-    // <main className="px-6">
-    
     <>
     <Hero/>
     <About/>
@@ -14,6 +12,5 @@ export default function HomePage() {
     <Contact />
     <Footer />
     </>
-      
   );
 }
