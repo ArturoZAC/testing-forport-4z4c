@@ -1,9 +1,19 @@
+'use client';
+
 import Link from "next/link";
 import { Tech } from "./Tech";
+import { useInView } from 'react-intersection-observer'
+
 
 export const Description = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
+
   return (
-    <div className="relative w-full max-w-1/2 max-middle:max-w-full ">
+    <div ref={ref} className={`relative w-full max-w-1/2 max-middle:max-w-full ${inView ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}>
       <div className="absolute top-1/2 -translate-y-1/2 -right-1 h-[calc(100%-25px)] w-2 rounded-full z-0 
       bg-gradient-to-b from-violet-600 to-fuchsia-600 blur-[2px]" />
       <div className="w-full bg-fourth rounded-2xl relative backdrop-blur-[10px] backdrop-saturate-150 z-10 h-full">
