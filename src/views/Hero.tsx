@@ -5,7 +5,7 @@ export const Hero = () => {
   return (
     <section id="home" className="px-6">
       <NavBar />
-      {/* <BodyHero /> */}
+      <BodyHero />
     </section> 
   )
 };

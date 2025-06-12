@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { useInView } from 'react-intersection-observer'
 
 export const Form = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
 
   const [formData, setFormData] = useState({
     name: "",
@@ -50,7 +56,7 @@ export const Form = () => {
     setIsSubmitting(false);
   };
   return (
-    <div className="w-full max-w-1/2 max-md:max-w-full h-auto">
+    <div ref={ref} className={`${inView ? 'animate__animated animate__fadeInLeft' : 'opacity-0'} w-full max-w-1/2 max-md:max-w-full h-auto`}>
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
           <label htmlFor="name">Your Name</label>

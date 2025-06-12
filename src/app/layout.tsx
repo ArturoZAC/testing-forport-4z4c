@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { montserrat } from "@/config/fonts";
 import "./globals.css";
+import 'animate.css';
 
 export const metadata: Metadata = {
   title: "Create Next App",
