@@ -50,7 +50,7 @@ export const Form = () => {
     setIsSubmitting(false);
   };
   return (
-    <div className="w-full max-w-1/2 max-md:max-w-full h-auto">
+    <div className="w-full max-w-1/2 max-md:max-w-full h-auto animate__animated animate__fadeInLeft">
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
           <label htmlFor="name">Your Name</label>

@@ -13,8 +13,9 @@ export const CardFull = (
     isLeft
   }: Props) => {
   return (
-    <div className={`flex flex-col w-full ${ isLeft ? 'items-start' : 'items-end' } gap-y-4 bg-fourth py-4 px-6 rounded-2xl relative`}>
-      <div className={`absolute size-12.5 bg-gradient-to-l from-violet-600 to-fuchsia-500 rounded-2xl -bottom-0.5 ${ isLeft ? '-left-0.5 ' : '-right-0.5'} -z-9 blur-sm`}></div>
+    // animate__animated animate__fadeInUp
+    <div className={`flex flex-col w-full ${ isLeft ? 'items-start' : 'items-end' } gap-y-4 !bg-fourth py-4 px-6 rounded-2xl relative !z-10!`}>
+      <div className={`absolute size-12.5 bg-gradient-to-l from-violet-600 to-fuchsia-500 rounded-2xl -bottom-0.5 ${ isLeft ? '-left-0.5 ' : '-right-0.5'} -z-999 blur-sm`}></div>
       <div className={`flex flex-col gap-y-1 ${ isLeft ? 'items-start' : 'items-end' }`}>
         <p className='subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m'>{title}</p>
         <p className='tiny-r text-tiny-d max-md:text-tiny-m'>{date}</p>

@@ -1,3 +1,6 @@
+'use client';
+import { useInView } from 'react-intersection-observer'
+
 interface Props {
   isLast?: boolean;
   title?: string;
@@ -12,8 +15,14 @@ export const SideLeft = (
     description="As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.",
     title = "Frontend Developer"
   }: Props) => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.2, 
+  });
+
   return (
-      <div className={`flex flex-col w-full max-w-[440px] items-end gap-y-4 ${isLast ? '' : 'mb-50'} bg-fourth py-4 px-6 rounded-2xl
+      <div ref={ref} className={`${inView ? 'animate__animated animate__fadeInLeft' : 'opacity-0'} flex flex-col w-full max-w-[440px] items-end gap-y-4 ${isLast ? '' : 'mb-50'} bg-fourth py-4 px-6 rounded-2xl
         max-md:w-full`}>
         <div className='flex flex-col gap-y-1 items-end'>
           <p className='subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m'>{title}</p>

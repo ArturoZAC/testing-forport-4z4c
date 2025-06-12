@@ -95,7 +95,7 @@ export const NavBar = () => {
               </div>
 
               {isOpen && (
-                <div className="absolute top-full mt-1 -left-0 max-md:-left-1 bg-primary border border-neutral-700 rounded-lg shadow-lg z-50 min-w-full text-sm text-secondary">
+                <div className="absolute animate__animated animate__fadeIn top-full mt-1 -left-0 max-md:-left-1 bg-primary border border-neutral-700 rounded-lg shadow-lg z-50 min-w-full text-sm text-secondary">
                   {['ENG', 'ESP'].map((lang) => (
                     <div
                       key={lang}
