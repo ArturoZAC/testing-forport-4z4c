@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 
 import { MainContainer } from "../responsive/MainContainer";
 import { links } from "@/data/linksData";
+import { HamburgerButton } from "../hero";
 
 export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('/');
   const [isMenuPressed, setIsMenuPressed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
+  const [language, setLanguage] = useState<'ENG' | 'ESP'>('ENG');
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -34,11 +37,10 @@ export const NavBar = () => {
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => {
       sections.forEach((section) => observer.unobserve(section));
     };
-  }, [ activeLink ]);
+  }, [activeLink]);
 
   const toggleMenu = () => {
     if (isMenuPressed) {
@@ -57,7 +59,7 @@ export const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-[10px] left-0 w-full z-50 flex flex-col items-center justify-center px-6"> 
+    <div className="fixed top-[10px] left-0 w-full z-50 flex flex-col items-center justify-center px-6">
       <MainContainer className="h-[60px] max-md:h-[50px] rounded-2xl flex px-6 py-4 max-md:px-3 max-md:py-2 justify-between bg-primary border-2 border-neutral-700">
         <div className="flex justify-center items-center">
           <Link href="/">
@@ -79,46 +81,39 @@ export const NavBar = () => {
             </ul>
           </nav>
           <div className="flex gap-x-2">
-            <div className="body-small-b text-body-small-d max-md:text-body-small-m flex items-center justify-center p-1 bg-gradient-to-r from-violet-700 to-fuchsia-700 rounded-lg gap-x-2 max-md:gap-x-1.5 text-secondary">
-              <div>
-                <Image src='/navbar/united-states.png' alt='unated-states' width={24} height={24} />
+            <div className="relative">
+              <div
+                onClick={() => setIsOpen(!isOpen)}
+                className="cursor-pointer body-small-b text-body-small-d max-md:text-body-small-m flex items-center justify-center p-1 bg-gradient-to-r from-violet-700 to-fuchsia-700 rounded-lg gap-x-2 max-md:gap-x-1.5 text-secondary"
+              > 
+                {
+                 language === 'ENG' 
+                  ?<Image src='/navbar/ENG.png' alt='language-icon' width={24} height={24} />
+                  :<Image src='/navbar/ESP.png' alt='language-icon' width={24} height={24} /> 
+                }
+                <p>{language}</p>
               </div>
-              <p>ENG</p>
+
+              {isOpen && (
+                <div className="absolute top-full mt-1 -left-0 max-md:-left-1 bg-primary border border-neutral-700 rounded-lg shadow-lg z-50 min-w-full text-sm text-secondary">
+                  {['ENG', 'ESP'].map((lang) => (
+                    <div
+                      key={lang}
+                      onClick={() => {
+                        setLanguage(lang as 'ENG' | 'ESP');
+                        setIsOpen(false);
+                      }}
+                      className={`min-w-[73px] flex cursor-pointer items-center justify-center px-1 py-2.5 gap-x-2 hover:bg-neutral-800 rounded ${language === lang ? 'bg-gradient-to-r from-violet-700 to-fuchsia-700 font-bold' : ''
+                        }`}
+                    >
+                      <Image src={`/navbar/${lang}.png`} alt='language-icon' width={24} height={24} />
+                      <p>{lang}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-            <button
-              className="group inline-flex md:hidden w-8 h-8 text-slate-800 bg-gradient-to-r from-violet-700 to-fuchsia-700 text-center items-center justify-center rounded shadow-[0_1px_0_theme(colors.slate.950/.04),0_1px_2px_theme(colors.slate.950/.12),inset_0_-2px_0_theme(colors.slate.950/.04)] hover:shadow-[0_1px_0_theme(colors.slate.950/.04),0_4px_8px_theme(colors.slate.950/.12),inset_0_-2px_0_theme(colors.slate.950/.04)] transition"
-              aria-pressed={isMenuPressed}
-              onClick={toggleMenu}
-            >
-              <span className="sr-only">Menu</span>
-              <svg
-                className="w-6 h-6 fill-current pointer-events-none"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect
-                  className="origin-center -translate-y-[5px] translate-x-[7px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-x-0 group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[315deg] text-white!"
-                  y="7"
-                  width="9"
-                  height="2"
-                  rx="1"
-                ></rect>
-                <rect
-                  className="origin-center transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.8)] group-[[aria-pressed=true]]:rotate-45 text-white!"
-                  y="7"
-                  width="16"
-                  height="2"
-                  rx="1"
-                ></rect>
-                <rect
-                  className="origin-center translate-y-[5px] transition-all duration-300 ease-[cubic-bezier(.5,.85,.25,1.1)] group-[[aria-pressed=true]]:translate-y-0 group-[[aria-pressed=true]]:rotate-[135deg] text-white!"
-                  y="7"
-                  width="9"
-                  height="2"
-                  rx="1"
-                ></rect>
-              </svg>
-            </button>
+            <HamburgerButton isMenuPressed={isMenuPressed} toggleMenu={toggleMenu} />
             {(isMenuPressed || isClosing) && (
               <div className={`fixed top-0 left-0 w-full h-screen bg-fourth z-50 flex flex-col p-6 gap-6 md:hidden ${isClosing ? 'animate-slide-out-navbar' : 'animate-slide-in-navbar'}`}>
                 <div className="flex justify-end">
