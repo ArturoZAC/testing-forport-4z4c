@@ -18,12 +18,18 @@ export const Certifications = () => {
 
     <MainContainer className="flex flex-col justify-center items-center gap-y-10 max-md:gap-y-5 px-10">
       <p className="h4-b text-h4-d max-md:text-h4-m">Certifications</p>
-      <div className="w-full overflow-visible relative">
+      <div className="w-full overflow-hidden relative">
         <Swiper
           effect={'cards'}
           grabCursor={true}
           modules={[EffectCards, Pagination]}
           pagination={{ clickable: true }}
+          // cardsEffect={{
+          //   perSlideOffset: 8,
+          //   perSlideRotate: 1,
+          //   rotate: true,
+          //   slideShadows: true,
+          // }}
           className="mySwiper"
         >
           <SwiperSlide>Slide 1</SwiperSlide>

@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 450px;
   aspect-ratio: 3/ 2;
-  overflow: visible;
+  /* overflow: visible; */
   position: relative;
 }
 
@@ -52,9 +52,6 @@
   background-color: rgb(218, 12, 218);
 }
 
-.swiper-slide:nth-child(10n) {
-  background-color: rgb(54, 94, 77);
-}
 
 .swiper-pagination-bullet {
   background: white;
