@@ -108,6 +108,10 @@
 
 @layer base {
 
+  * {
+  outline: 1px solid red !important;
+}
+
   html {
     scroll-behavior: smooth;
   }
