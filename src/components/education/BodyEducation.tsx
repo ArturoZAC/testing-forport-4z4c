@@ -1,5 +1,5 @@
 import { MainContainer } from "../responsive/MainContainer"
-import { CardFull, Certifications, SideLeft, SideMiddle, SideRight } from "."
+import { CardFull, SideLeft, SideMiddle, SideRight } from "."
 import { cardFullData, leftCards, rightCards } from "@/data"
 
 
