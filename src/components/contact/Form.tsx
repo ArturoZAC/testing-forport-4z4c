@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { useInView } from 'react-intersection-observer'
 
 export const Form = () => {
@@ -50,7 +50,11 @@ export const Form = () => {
         className: '!bg-fourth-back !text-white'
       });
     } catch {
-      alert("Hubo un error al enviar el mensaje");
+      toast.error("Error al enviar el mensaje", {
+        duration: 2000,
+        position: 'bottom-center',
+        className: '!bg-fourth-back !text-white'
+      });
     }
 
     setIsSubmitting(false);
@@ -105,7 +109,6 @@ export const Form = () => {
         >
           {isSubmitting ? "Sending..." : "Send"}
         </button>
-        <Toaster  />
       </form>
     </div>
   );

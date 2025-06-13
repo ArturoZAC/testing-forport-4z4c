@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { montserrat } from "@/config/fonts";
 import "./globals.css";
 import 'animate.css';
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Portafolio 4z4c",
@@ -19,6 +20,7 @@ export default function RootLayout({
         className={`${montserrat.className} antialiased text-secondary scroll-smooth`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
