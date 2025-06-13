@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, Pagination } from 'swiper/modules';
+import { EffectCreative, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,15 +16,25 @@ import { MainContainer } from "../responsive/MainContainer";
 export const Certifications = () => {
   return (
 
-    <MainContainer className="flex flex-col justify-center items-center gap-y-10 max-md:gap-y-5 px-10">
+    <MainContainer className="flex flex-col justify-center items-center gap-y-10 max-md:gap-y-5 px-4">
       <p className="h4-b text-h4-d max-md:text-h4-m">Certifications</p>
-      <div className="w-full overflow-visible relative">
+      <div className="w-full relative">
         <Swiper
-          effect={'cards'}
           grabCursor={true}
-          modules={[EffectCards, Pagination]}
+          effect={'creative'}
           pagination={{ clickable: true }}
-          className="mySwiper"
+          modules={[EffectCreative, Pagination]}
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: [0, 0, -250],
+              rotate: [0, 0, -5],
+            },
+            next: {
+              translate: [0, 0, -250],
+              rotate: [0, 0, 5],
+            },
+          }}
         >
           <SwiperSlide>Slide 1</SwiperSlide>
           <SwiperSlide>Slide 2</SwiperSlide>
