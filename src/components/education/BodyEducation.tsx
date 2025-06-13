@@ -36,7 +36,7 @@ export const BodyEducation = () => {
           }
         </div>
       </MainContainer>
-      <Certifications />
+      {/* <Certifications /> */}
     </div>
   )
 }
