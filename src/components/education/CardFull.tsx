@@ -23,12 +23,11 @@ export const CardFull = (
 
   const animatedView = inView 
                           ? isLeft 
-                            ? 'animate__animated animate__fadeInLeft' 
-                            : 'animate__animated animate__fadeInRight' 
+                            ? 'animate__animated animate__fadeInUp' 
+                            : 'animate__animated animate__fadeInUp' 
                           : 'opacity-0';
 
   return (
-    // animate__animated animate__fadeInUp
     <div ref={ref} 
     className={`flex ${animatedView}  flex-col w-full ${ isLeft ? 'items-start' : 'items-end' } gap-y-4 !bg-fourth py-4 px-6 rounded-2xl relative !z-10!`}>
       <div className={`absolute size-6 bg-gradient-to-l from-violet-600 to-fuchsia-500 rounded-2xl -bottom-0.5 ${ isLeft ? '-left-0.5 ' : '-right-0.5'} -z-999 blur-sm`}></div>

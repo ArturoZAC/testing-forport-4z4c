@@ -279,11 +279,7 @@
 
 @layer utilities {
   .animate-scrollSkills {
-    animation: scrollSkills 30s linear infinite;
-  }
-
-  .group:hover .animate-scrollSkills {
-    animation-play-state: paused;
+    animation: scrollSkills 25s linear infinite;
   }
 
 }

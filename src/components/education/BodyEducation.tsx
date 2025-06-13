@@ -1,5 +1,5 @@
 import { MainContainer } from "../responsive/MainContainer"
-import { CardFull, SideLeft, SideMiddle, SideRight } from "."
+import { CardFull, Certifications, SideLeft, SideMiddle, SideRight } from "."
 import { cardFullData, leftCards, rightCards } from "@/data"
 
 
@@ -36,7 +36,7 @@ export const BodyEducation = () => {
           }
         </div>
       </MainContainer>
-      {/* <Certifications /> */}
+      <Certifications />
     </div>
   )
 }

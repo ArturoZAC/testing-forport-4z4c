@@ -30,7 +30,7 @@ export const Connect = () => {
   });
 
   return (
-    <div ref={ref} className={`w-full max-w-1/2 max-md:max-w-full bg-fourth rounded-2xl h-[inherit] ${inView ? 'animate__animated animate__fadeInRight' : 'opacity-0'}`}>
+    <div ref={ref} className={`w-full max-w-1/2 max-md:max-w-full bg-fourth rounded-2xl h-[inherit] ${inView ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`}>
       <div className="py-10 px-8 flex flex-col gap-y-10 body-small-r text-body-small-d max-md:text-body-small-m">
         <p className="subtitle1-b text-subtitle-1-d max-md:text-subtitle-1-m  bg-gradient-to-l from-violet-600 to-fuchsia-600 text-transparent bg-clip-text">Leave a message and connect with us</p>
         <p>Whether it’s feedback, collaboration, or simple curiosity, your message matters. Connect with us and let’s create something meaningful together.</p>

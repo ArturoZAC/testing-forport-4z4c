@@ -56,7 +56,7 @@ export const Form = () => {
     setIsSubmitting(false);
   };
   return (
-    <div ref={ref} className={`${inView ? 'animate__animated animate__fadeInLeft' : 'opacity-0'} w-full max-w-1/2 max-md:max-w-full h-auto`}>
+    <div ref={ref} className={`${inView ? 'animate__animated animate__fadeInUp' : 'opacity-0'} w-full max-w-1/2 max-md:max-w-full h-auto`}>
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
           <label htmlFor="name">Your Name</label>
