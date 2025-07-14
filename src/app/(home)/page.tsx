@@ -2,15 +2,15 @@ import { About, Contact, Education, Footer, Hero, Projects, Skills } from "@/vie
 
 export default function HomePage() {
 
-  return (
+  return ( 
     <>
     <Hero/>
-    <About/>
+    {/* <About/>
     <Education />
     <Skills />
     <Projects />
     <Contact />
-    <Footer />
+    <Footer /> */}
     </>
   );
 }
