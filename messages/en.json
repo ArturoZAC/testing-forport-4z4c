@@ -1,4 +1,20 @@
 {
+  "Titles":{
+    "about": "About Me"
+  },
+  "About":{
+    "title": "WHO I AM?",
+    "mainContent": "💻 As a full-stack developer, I have experience building both front- and back-end platforms. 🧠 I stand out for my ability to solve problems in practical and creative ways. 🔧 Programming is my passion, I enjoy learning new technologies and taking on challenges that push me to improve. 🤝 I'm motivated by working as a team with other talented programmers and continuing to grow every day.",
+    "footerContent": "Currently, I continue my passion for programming at Devtalles, actively taking several courses and expanding my knowledge on the same platform. 📚💻",
+    "lead1": "Problem Solver",
+    "description1": "Approaching complex coding challenges with analytical thinking and persistence.",
+    "lead2": "Continuous Learner",
+    "description2": "Passionate about staying updated with the latest technologies and best practices.",
+    "lead3": "Creative Thinker",
+    "description3": "Finding innovative solutions by thinking outside the box.",
+    "lead4": "Academic Focus",
+    "description4": "Currently pursuing programming courses at Devtalles."
+  },
   "NavBar":{
     "home": "Home",
     "about": "About",
@@ -10,7 +26,7 @@
   "BodyHero": {
     "initMessage": "Actively Seeking Job Opportunities",
     "title": "Crafting Beautiful & Functional Web Experiences",
-    "content": "Hey, I&apos;m Arturo, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.",
+    "content": "Hey, I'm Arturo, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.",
     "buttonCv": "Download CV 📍📄"
   }
 }

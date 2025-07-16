@@ -1,4 +1,20 @@
 {
+  "Titles":{
+    "about": "Sobre Mi"
+  },
+  "About":{
+    "title": "¿QUIEN SOY?",
+    "mainContent": "💻 Como desarrollador full-stack, tengo experiencia construyendo tanto plataformas front-end como back-end.🧠 Me destaco por mi capacidad para resolver problemas de manera práctica y creativa.🔧La programación es mi pasión, disfruto aprender nuevas tecnologías y asumir desafíos que me impulsen a mejorar.🤝 Me motiva trabajar en equipo con otros programadores talentosos y seguir creciendo cada día.",
+    "footerContent": "Actualmente, continúo con mi pasión por la programación en Devtalles, tomando varios cursos de forma activa y ampliando mis conocimientos en la misma plataforma. 📚💻",
+    "lead1": "Resolutor de Problemas",
+    "description1": "Enfrentando desafíos de programación complejos con pensamiento analítico.",
+    "lead2": "Aprendiz Constante",
+    "description2": "Apasionado por estar al día con las últimas tecnologías y buenas prácticas.",
+    "lead3": "Pensador Creativo",
+    "description3": "Encontrando soluciones innovadoras con un enfoque fuera de lo común.",
+    "lead4": "Enfoque Académico",
+    "description4": "Actualmente sigo formándome en programación a través de cursos en Devtalles."
+  },
   "NavBar":{
     "home": "Inicio",
     "about": "Sobre Mi",

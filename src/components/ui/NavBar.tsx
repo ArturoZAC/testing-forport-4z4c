@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useRouter, usePathname } from 'next/navigation';
 import { Link } from "@/i18n/navigation";
 import { MainContainer } from "../responsive/MainContainer";
-// import { links } from "@/data/linksData";
 import { HamburgerButton } from "../hero";
 import { GetLinksWithTranslate } from "@/data/linksData";
 
@@ -22,18 +21,26 @@ export const NavBar = () => {
   const pathname = usePathname();
 
   const handleLanguageChange = (lang: 'ENG' | 'ESP') => {
-    setLanguage(lang);
+    localStorage.setItem('languague', lang);
+    const languageValue = localStorage.getItem('languague');
+    setLanguage(languageValue as 'ENG' | 'ESP');
     setIsOpen(false);
-  
+    
     // Determina el prefijo de idioma
     const langPrefix = lang === 'ENG' ? '/en' : '/es';
-  
+    
     // Quita el prefijo de idioma actual si existe
     const pathWithoutLang = pathname.replace(/^\/(en|es)/, '');
-  
+    
     // Navega a la nueva ruta con el idioma seleccionado
     router.push(`${langPrefix}${pathWithoutLang}`);
   };
+
+  useEffect(() => {
+    const languageEffect = localStorage.getItem('languague');
+    setLanguage(languageEffect as 'ENG' | 'ESP');
+  }, []);
+  
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
