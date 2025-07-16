@@ -1,0 +1,16 @@
+{
+  "NavBar":{
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "BodyHero": {
+    "initMessage": "Actively Seeking Job Opportunities",
+    "title": "Crafting Beautiful & Functional Web Experiences",
+    "content": "Hey, I&apos;m Arturo, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.",
+    "buttonCv": "Download CV 📍📄"
+  }
+}

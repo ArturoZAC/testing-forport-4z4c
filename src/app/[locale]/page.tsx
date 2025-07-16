@@ -5,12 +5,12 @@ export default function HomePage() {
   return ( 
     <>
     <Hero/>
-    <About/>
+    {/* <About/>
     <Education />
     <Skills />
     <Projects />
     <Contact />
-    <Footer />
+    <Footer /> */}
     </>
   );
 }

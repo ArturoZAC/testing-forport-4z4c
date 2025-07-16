@@ -1,0 +1,16 @@
+{
+  "NavBar":{
+    "home": "Inicio",
+    "about": "Sobre Mi",
+    "education": "Educación",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "BodyHero": {
+    "initMessage": "Buscando oportunidades laborales",
+    "title": "Creando experiencias web hermosas & funcionales",
+    "content": "Hola, soy Arturo, un desarrollador Full Stack apasionado por crear aplicaciones de alto rendimiento, fáciles de usar y escalables.",
+    "buttonCv": "Descargar CV 📍📄"
+  }
+}

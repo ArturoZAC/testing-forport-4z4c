@@ -1,8 +1,15 @@
-export const links = [
-  { name: 'Home', path: '#home' },
-  { name: 'About Me', path: '#about' },
-  { name: 'Education', path: '#education' },
-  { name: 'Skills', path: '#skills' },
-  { name: 'Projects', path: '#projects' },
-  { name: 'Contact', path: '#contact' },
-];
+import { useTranslations } from "next-intl";
+
+
+export const GetLinksWithTranslate = () => {
+  const t = useTranslations('NavBar');
+
+  return [
+    { name: `${t('home')}`, path: '#home' },
+    { name: `${t('about')}`, path: '#about' },
+    { name: `${t('education')}`, path: '#education' },
+    { name: `${t('skills')}`, path: '#skills' },
+    { name: `${t('projects')}`, path: '#projects' },
+    { name: `${t('contact')}`, path: '#contact' },
+  ]
+};

@@ -1,12 +1,13 @@
 'use client';
 
-import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
+import { useRouter, usePathname } from 'next/navigation';
+import { Link } from "@/i18n/navigation";
 import { MainContainer } from "../responsive/MainContainer";
-import { links } from "@/data/linksData";
+// import { links } from "@/data/linksData";
 import { HamburgerButton } from "../hero";
+import { GetLinksWithTranslate } from "@/data/linksData";
 
 export const NavBar = () => {
 
@@ -15,6 +16,24 @@ export const NavBar = () => {
   const [isClosing, setIsClosing] = useState(false);
   const [language, setLanguage] = useState<'ENG' | 'ESP'>('ENG');
   const [isOpen, setIsOpen] = useState(false);
+
+  const links = GetLinksWithTranslate();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleLanguageChange = (lang: 'ENG' | 'ESP') => {
+    setLanguage(lang);
+    setIsOpen(false);
+  
+    // Determina el prefijo de idioma
+    const langPrefix = lang === 'ENG' ? '/en' : '/es';
+  
+    // Quita el prefijo de idioma actual si existe
+    const pathWithoutLang = pathname.replace(/^\/(en|es)/, '');
+  
+    // Navega a la nueva ruta con el idioma seleccionado
+    router.push(`${langPrefix}${pathWithoutLang}`);
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -99,10 +118,11 @@ export const NavBar = () => {
                   {['ENG', 'ESP'].map((lang) => (
                     <div
                       key={lang}
-                      onClick={() => {
-                        setLanguage(lang as 'ENG' | 'ESP');
-                        setIsOpen(false);
-                      }}
+                      onClick={() => handleLanguageChange(lang as 'ENG' | 'ESP')}
+                      // onClick={() => {
+                      //   setLanguage(lang as 'ENG' | 'ESP');
+                      //   setIsOpen(false);
+                      // }}
                       className={`min-w-[73px] flex cursor-pointer items-center justify-center px-1 py-2.5 gap-x-2 hover:bg-neutral-800 rounded ${language === lang ? 'bg-gradient-to-r from-violet-700 to-fuchsia-700 font-bold' : ''
                         }`}
                     >
