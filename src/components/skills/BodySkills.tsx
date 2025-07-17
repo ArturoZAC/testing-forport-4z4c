@@ -1,12 +1,13 @@
 import { svgsSkills } from "@/data";
 import { MainContainer } from "../responsive/MainContainer"
+import { getTranslations } from "next-intl/server";
 
-export const BodySkills = () => {
-
+export const BodySkills = async() => {
+  const t = await getTranslations('Skills');
   return (
     <div className="flex flex-col justify-center items-center overflow-hidden">
       <MainContainer className="flex flex-col gap-y-14">
-        <p className="text-pretty body-small-sm text-body-small-d max-md:text-body-small-m">Here are the powerful tools and technologies I use to bring your idea to life. From modern front-end frameworks to robust back-end systems, I build comprehensive and scalable solutions tailored to your specific needs. I focus on delivering high-quality, well-structured products with a lasting impact, ensuring a solid experience for both users and clients. Whether you&apos;re starting a new project or improving an existing one, I&apos;m ready to help take it to the next level.</p>
+        <p className="text-pretty body-small-sm text-body-small-d max-md:text-body-small-m">{t('description')}</p>
         <div className="overflow-hidden w-full group mask-x-from-99% mask-x-to-100%">
           <div className="flex flex-row animate-scrollSkills w-max gap-x-10 text-white">
             {[...svgsSkills, ...svgsSkills].map((skill, id) => (

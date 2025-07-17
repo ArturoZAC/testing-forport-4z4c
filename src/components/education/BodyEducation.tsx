@@ -1,9 +1,14 @@
 import { MainContainer } from "../responsive/MainContainer"
 import { CardFull, Certifications, SideLeft, SideMiddle, SideRight } from "."
-import { cardFullData, leftCards, rightCards } from "@/data"
+import { getFullCards, getLeftCards, getRightCards } from "@/data"
 
 
-export const BodyEducation = () => {
+export const BodyEducation = async() => {
+
+  const leftCards = await getLeftCards();
+  const rightCards = await getRightCards();
+  const cardFullData = await getFullCards();
+
   return (
     <div className="flex flex-col w-full justify-center items-center gap-y-20 max-md:gap-y-10">
       <MainContainer className="flex justify-center items-stretch h-auto">

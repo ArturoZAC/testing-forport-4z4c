@@ -1,10 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useInView } from 'react-intersection-observer'
 
 export const Form = () => {
+
+  const t = useTranslations('Contact');
 
   const { ref, inView } = useInView({
     triggerOnce: true, 
@@ -63,9 +66,9 @@ export const Form = () => {
     <div ref={ref} className={`${inView ? 'animate__animated animate__fadeInUp' : 'opacity-0'} w-full max-w-1/2 max-md:max-w-full h-auto`}>
       <form onSubmit={handleSubmit} className="flex flex-col gap-y-8">
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
-          <label htmlFor="name">Your Name</label>
+          <label htmlFor="name">{t('name')}</label>
           <input
-            placeholder="Name"
+            placeholder={t('name').split(' ')[1]}
             type="text"
             name="name"
             id="name"
@@ -75,9 +78,9 @@ export const Form = () => {
           />
         </div>
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
-          <label htmlFor="email">Your Email</label>
+          <label htmlFor="email">{t('email')}</label>
           <input
-            placeholder="name123@gmail.com"
+            placeholder={`${t('email').split(' ').at(1)?.toLowerCase()}123@gmail.com`}
             type="email"
             name="email"
             id="email"
@@ -87,9 +90,9 @@ export const Form = () => {
           />
         </div>
         <div className="flex flex-col gap-y-4 body-large-r text-body-large-d max-md:text-body-large-m">
-          <label htmlFor="message">Your Message</label>
+          <label htmlFor="message">{t('message')}</label>
           <textarea
-            placeholder="Message"
+            placeholder={t('message').split(' ')[1]}
             name="message"
             id="message"
             value={formData.message}
@@ -107,7 +110,7 @@ export const Form = () => {
             }`}
           disabled={ isSubmitting }
         >
-          {isSubmitting ? "Sending..." : "Send"}
+          {isSubmitting ? t('sending') : t('send')}
         </button>
       </form>
     </div>
