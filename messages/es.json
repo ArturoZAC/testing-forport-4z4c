@@ -66,5 +66,10 @@
     "sending": "Enviando...",
     "connectTitle": "Deja un mensaje y conecta conmigo",
     "connectDescription": "Ya sea una opinión, una colaboración o simple curiosidad, tu mensaje es importante. Conecta con nosotros y creemos algo significativo juntos."
+  },
+  "Footer":{
+    "mainFooter": "Un desarrollador de software apasionado, con experiencia tanto en programación de bajo nivel como en tecnologías de desarrollo web, hábil en la construcción de sistemas e interfaces front-end intuitivos y en el desarrollo de arquitecturas back-end escalables utilizando frameworks modernos y buenas prácticas.",
+    "creditsPrimary": "4Z4C © 2025. All rights reserved.",
+    "creditsSecondary": "Designed & Built with 🤍 by 4Z4C."
   }
 }
