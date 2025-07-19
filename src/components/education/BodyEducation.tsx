@@ -5,9 +5,11 @@ import { getFullCards, getLeftCards, getRightCards } from "@/data"
 
 export const BodyEducation = async() => {
 
-  const leftCards = await getLeftCards();
-  const rightCards = await getRightCards();
-  const cardFullData = await getFullCards();
+  const [ leftCards, rightCards, cardFullData ] = await Promise.all([
+    getLeftCards(),
+    getRightCards(),
+    getFullCards(),
+  ])
 
   return (
     <div className="flex flex-col w-full justify-center items-center gap-y-20 max-md:gap-y-10">

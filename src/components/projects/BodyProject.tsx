@@ -1,9 +1,6 @@
 'use client';
-import Image from "next/image";
-import { MainContainer } from "../responsive/MainContainer" 
-import { Description } from "./Description";
-
 import { useInView } from 'react-intersection-observer'
+import { IndividualProject } from "./IndividualProject";
 
 export const BodyProject = () => {
 
@@ -13,11 +10,11 @@ export const BodyProject = () => {
   });
 
   return (
-    <div ref={ref} className="flex flex-row w-full justify-center items-center">
-      <MainContainer className="flex justify-center gap-x-10 items-stretch h-auto max-middle:flex-col max-middle:gap-y-10">
-        <Image width={ "524" } height={"288"} alt="beach" src={'/projects/beach.jpg'} className={`w-full max-w-1/2 rounded-2xl max-middle:max-w-full ${inView ? 'animate__animated animate__fadeInUp' : 'opacity-0'}`} />
-        <Description/>
-      </MainContainer>
+    <div ref={ref} className="flex flex-col w-full justify-center items-center gap-y-10">
+      <IndividualProject inView={inView}/>
+      <IndividualProject inView={inView} isOdd={true}/>
+      <IndividualProject inView={inView}/>
+      <IndividualProject inView={inView} isOdd={true}/>
     </div>
   )
 };

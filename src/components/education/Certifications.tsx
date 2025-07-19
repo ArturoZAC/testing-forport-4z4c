@@ -30,12 +30,12 @@ export const Certifications = () => {
           creativeEffect={{
             prev: {
               shadow: true,
-              translate: [0, 0, -250],
-              rotate: [0, 0, -5],
+              translate: [0, 0, -400],
+              rotate: [0, 0, -10],
             },
             next: {
-              translate: [0, 0, -250],
-              rotate: [0, 0, 5],
+              translate: [0, 0, -400],
+              rotate: [0,0, 10],
             },
           }}
         >
