@@ -38,7 +38,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     const languageEffect = localStorage.getItem('languague');
-    setLanguage(languageEffect as 'ENG' | 'ESP');
+    setLanguage(languageEffect as 'ENG' | 'ESP' ?? 'ENG');
   }, []);
   
 
