@@ -10,7 +10,7 @@ export const BodyProject = () => {
   });
 
   return (
-    <div ref={ref} className="flex flex-col w-full justify-center items-center gap-y-10">
+    <div ref={ref} className="flex flex-col w-full justify-center items-center gap-y-40 max-middle:gap-y-10">
       <IndividualProject inView={inView}/>
       <IndividualProject inView={inView} isOdd={true}/>
       <IndividualProject inView={inView}/>
