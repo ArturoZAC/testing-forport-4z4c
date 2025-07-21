@@ -8,18 +8,22 @@ const connectSvgs = [
   {
     id: "contactTwitter",
     name: "Twitter",
+    href: "https://x.com/Zacariasyat1",
   },
   {
     id: "contactFacebook",
-    name: "Facebook"
+    name: "Facebook",
+    href: "https://www.facebook.com/Zacarias.AA",
   },
   {
     id: "contactLinkedin",
-    name: "LinkedIn"
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/arturo-zacarias-araujo-cunya-6a7288264/",
   },
   {
     id: "contactInstagram",
-    name: "Instagram"
+    name: "Instagram",
+    href: "https://www.instagram.com/4z4csxz/",
   }
 ]
 
@@ -40,7 +44,7 @@ export const Connect = () => {
         <div className="grid grid-cols-2 max-sm:gap-x-10 gap-y-10 max-sm:gap-y-5 justify-items-center items-center w-full max-middle:w-full">
         {
           connectSvgs.map((svg, id) => (
-            <Link href={`/${svg.id}`} key={id}>
+            <Link href={svg.href} key={id} target="_blank">
               <div className="flex flex-col items-center gap-y-3">
                 <svg className="w-9 h-9 max-md:w-7 max-md:h-7">
                   <use xlinkHref={`/assets/sprite.svg#${svg.id}`} />

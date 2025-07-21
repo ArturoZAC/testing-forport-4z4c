@@ -3,19 +3,19 @@ import Link from "next/link";
 
 const svgs = [
   {
-    link: "/a",
+    link: "https://x.com/Zacariasyat1",
     id: "twitter"
   },
   {
-    link: "/b",
+    link: "https://www.instagram.com/4z4csxz/",
     id: "instagram"
   },
   {
-    link: "/c",
+    link: "https://www.linkedin.com/in/arturo-zacarias-araujo-cunya-6a7288264/",
     id: "linkedin"
   },
   {
-    link: "/d",
+    link: "https://www.facebook.com/Zacarias.AA",
     id: "facebook"
   },
 ];
@@ -33,7 +33,7 @@ export const MainFoot = async() => {
       <div className="flex flex-row gap-x-8">
         {
           svgs.map( ( svg ) => (
-            <Link href={svg.link} key={svg.link} className="flex items-center justify-center rounded-full">
+            <Link href={svg.link} key={svg.link} className="flex items-center justify-center rounded-full" target="_blank">
               <svg className={
                 svg.id === 'twitter' 
                   ? "w-[22px] h-[22px] max-md:w-[16px] max-md:h-[16px]"
