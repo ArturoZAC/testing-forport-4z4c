@@ -21,25 +21,25 @@ export const NavBar = () => {
   const pathname = usePathname();
 
   const handleLanguageChange = (lang: 'ENG' | 'ESP') => {
-    localStorage.setItem('languague', lang);
+    localStorage.setItem('languague', lang ?? 'ENG');
     const languageValue = localStorage.getItem('languague');
     setLanguage(languageValue as 'ENG' | 'ESP');
     setIsOpen(false);
     
-    // Determina el prefijo de idioma
     const langPrefix = lang === 'ENG' ? '/en' : '/es';
     
-    // Quita el prefijo de idioma actual si existe
     const pathWithoutLang = pathname.replace(/^\/(en|es)/, '');
     
-    // Navega a la nueva ruta con el idioma seleccionado
     router.push(`${langPrefix}${pathWithoutLang}`);
   };
 
   useEffect(() => {
-    const languageEffect = localStorage.getItem('languague');
-    setLanguage(languageEffect as 'ENG' | 'ESP' ?? 'ENG');
-  }, []);
+    // const languageEffect = localStorage.getItem('languague');
+    // setLanguage(languageEffect as 'ENG' | 'ESP' ?? 'ENG');
+    const pathLang = pathname.startsWith('/es') ? 'ESP': 'ENG';
+    setLanguage(pathLang);
+    localStorage.setItem('language', pathLang);
+  }, [pathname]);
   
 
   useEffect(() => {
