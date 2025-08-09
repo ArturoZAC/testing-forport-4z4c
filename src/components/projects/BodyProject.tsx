@@ -1,20 +1,13 @@
-'use client';
-import { useInView } from 'react-intersection-observer'
 import { IndividualProject } from "./IndividualProject";
 
 export const BodyProject = () => {
 
-  const { ref, inView } = useInView({
-    triggerOnce: true, 
-    threshold: 0.2, 
-  });
-
   return (
-    <div ref={ref} className="flex flex-col w-full justify-center items-center gap-y-40 max-middle:gap-y-10">
-      <IndividualProject inView={inView}/>
-      <IndividualProject inView={inView} isOdd={true}/>
-      <IndividualProject inView={inView}/>
-      <IndividualProject inView={inView} isOdd={true}/>
+    <div className="flex flex-col w-full justify-center items-center gap-y-40 max-middle:gap-y-10">
+      <IndividualProject/>
+      <IndividualProject isOdd={true}/>
+      <IndividualProject/>
+      <IndividualProject isOdd={true}/>
     </div>
   )
 };

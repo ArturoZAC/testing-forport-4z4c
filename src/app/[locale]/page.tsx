@@ -4,13 +4,13 @@ export default function HomePage() {
 
   return ( 
     <>
-    <Hero/>
-    <About/>
-    <Education />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
+      <Hero/>
+      <About/>
+      <Education />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 }
