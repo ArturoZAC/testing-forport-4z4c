@@ -1,38 +1,64 @@
 import Link from "next/link";
 import { Tech } from "./Tech";
+import { Properties } from "@/interfaces/projects/properties.interface";
 
-
-export const Description = ({ isOdd }: { isOdd?: boolean}) => {
-
+export const Description = ({
+  isOdd,
+  title,
+  links,
+  description,
+  stack,
+  video,
+}: Properties) => {
   return (
-    <div className={`relative w-full max-w-1/2 max-middle:max-w-full`}>
-      <div className={`absolute top-1/2 -translate-y-1/2 ${ isOdd ? '-left-1': '-right-1' } h-[calc(100%-25px)] w-2 rounded-full z-0 bg-gradient-to-b from-violet-600 to-fuchsia-600 blur-[2px]`} />
+    <div className={`relative w-full max-w-1/2 max-middle:max-w-full `}>
+      <div
+        className={`absolute top-1/2 -translate-y-1/2 ${
+          isOdd ? "-left-1" : "-right-1"
+        } h-[calc(100%-25px)] w-2 rounded-full z-0 bg-gradient-to-b from-violet-600 to-fuchsia-600 blur-[2px]`}
+      />
       <div className="w-full bg-fourth rounded-2xl relative backdrop-blur-[10px] backdrop-saturate-150 z-10 h-full">
-        <div className="flex flex-col gap-y-4 px-7 max-sm:px-5 py-5 h-full">
+        <div className="flex flex-col gap-y-4 p-5 max-sm:px-5  h-full">
           <div className="space-y-3">
-            <p className="subtitle2-b text-subtitle-2-d max-md:text-subtitle-2-m">Title</p>
-            <div className="flex gap-x-10 body-large-sm text-body-large-d max-md:text-body-large-m">
-              <Link href={"/"} className="flex justify-center items-center gap-x-3">
-                <svg className="w-6 h-6">
-                  <use xlinkHref={`/assets/sprite.svg#demo`} />
-                </svg>
-                <p>Demo</p>
-              </Link>
-              <Link href={"/"} className="flex justify-center items-center gap-x-3">
-                <svg className="w-6 h-6">
-                  <use xlinkHref={`/assets/sprite.svg#github`} />
-                </svg>
-                <p>Code</p>
-              </Link>
+            <div className="flex flex-row justify-between">
+              <p className="subtitle2-b text-lead-d max-md:text-lead-m">
+                {title}
+              </p>
+              {video && (
+                <Link
+                  target="_blank"
+                  href={video}
+                  className="flex justify-center items-center gap-x-2 text-body-small-d max-md:text-body-small-m font-semibold"
+                >
+                  <svg className="w-6 h-6">
+                    <use xlinkHref={`/assets/sprite.svg#youtube`} />
+                  </svg>
+                  <p>Video</p>
+                </Link>
+              )}
+            </div>
+            <div className="flex gap-x-6 body-large-sm text-body-small-d max-md:text-body-small-m">
+              {links?.map(({ name, nameSvg }) => (
+                <Link
+                  key={name}
+                  href={"/"}
+                  className="flex justify-center items-center gap-x-2"
+                >
+                  <svg className="w-6 h-6">
+                    <use xlinkHref={`/assets/sprite.svg#${nameSvg}`} />
+                  </svg>
+                  <p>{name}</p>
+                </Link>
+              ))}
             </div>
           </div>
           <div className="space-y-3 body-small-r text-body-small-d max-md:text-body-small-m">
-            <p className="break-words text-justify">
-              As a software Developer with a background in computer systems, algorithms, and data structures, I have two years of experience in IT and two years of English studies under my belt.
-            </p>
+            <p className="break-words text-justify">{description}</p>
           </div>
-          <div className="grid grid-cols-4 gap-2 max-sm:grid-cols-3">
-            <Tech />
+          <div className="flex flex-row flex-wrap justify-around gap-4">
+            {stack?.map((name) => (
+              <Tech key={name} text={name} />
+            ))}
           </div>
         </div>
       </div>

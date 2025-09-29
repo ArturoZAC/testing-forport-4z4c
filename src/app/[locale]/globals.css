@@ -9,10 +9,10 @@
 @theme {
   --color-primary: #010101;
   --color-secondary: #ffffff;
-  --color-third: #A31AEF;
+  --color-third: #a31aef;
   --color-third-light: #e9a7ff;
   --color-third-back: #774192;
-  --color-fourth: #0E0E0E;
+  --color-fourth: #0e0e0e;
   --color-fourth-back: #262626;
   --color-border: #404040;
 
@@ -39,7 +39,7 @@
   --text-small-m: 12px;
   --text-tiny-d: 12px;
   --text-tiny-m: 11px;
-  
+
   --animate-colorChange: colorChange 0.3s ease-in forwards;
   --animate-shine: shine 1.5s infinite linear;
   --animate-scaleTitle: scaleTitle 0.5s ease-in-out forwards;
@@ -69,16 +69,22 @@
   }
 
   @keyframes scaleTitle {
-    from { transform: scaleX(0); }
-    to { transform: scaleX(1); }
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
   }
 
   @keyframes scrollSkills {
-    to { transform: translateX(calc( -50% - 20px )); }
+    to {
+      transform: translateX(calc(-50% - 20px));
+    }
   }
 
   @keyframes slide-in-navbar {
-    0% { 
+    0% {
       transform: translateX(-100%);
     }
     100% {
@@ -103,12 +109,10 @@
       opacity: 0.2;
     }
   }
-    
 }
 
 @layer base {
-
-/* * {
+  /* * {
   outline: 1px solid red !important;
 }  */
 
@@ -131,13 +135,13 @@
   }
 
   li.underline-animate::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to left, #7F22FE, #C800DE);
+    background: linear-gradient(to left, #7f22fe, #c800de);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
@@ -146,144 +150,140 @@
   li.underline-animate.active::after {
     transform: scaleX(1);
   }
-
 }
 
 @layer components {
-
   .input-custom {
     @apply rounded-md bg-fourth h-full outline-none border-2 border-neutral-700 focus:border-neutral-500 transition-colors duration-300;
   }
 
   .display-sm {
-    @apply font-semibold leading-[1.2] tracking-[-0.02em]
+    @apply font-semibold leading-[1.2] tracking-[-0.02em];
   }
 
   .h1-sm {
-    @apply font-semibold leading-[1.2] tracking-[-0.02em]
+    @apply font-semibold leading-[1.2] tracking-[-0.02em];
   }
-  
+
   .h2-sm {
-    @apply font-semibold leading-[1.2] tracking-[-0.01em]
+    @apply font-semibold leading-[1.2] tracking-[-0.01em];
   }
 
   .h2-r {
-    @apply font-normal leading-[1.2] tracking-[-0.01em]
+    @apply font-normal leading-[1.2] tracking-[-0.01em];
   }
 
   .text-h3-b-d {
-    @apply text-[40px] font-bold leading-[1.2] tracking-[-0.01em]
+    @apply text-[40px] font-bold leading-[1.2] tracking-[-0.01em];
   }
 
   .text-h3-r-d {
-    @apply text-[40px] font-normal leading-[1.2] tracking-[-0.01em]
+    @apply text-[40px] font-normal leading-[1.2] tracking-[-0.01em];
   }
 
   .h4-b {
-    @apply font-bold leading-[1.2] tracking-[0rem]
+    @apply font-bold leading-[1.2] tracking-[0rem];
   }
 
   .h4-r {
-    @apply font-normal leading-[1.2] tracking-[0rem]
+    @apply font-normal leading-[1.2] tracking-[0rem];
   }
 
   .subtitle1-b {
-    @apply font-bold leading-[1.2] tracking-[0em]
+    @apply font-bold leading-[1.2] tracking-[0em];
   }
 
   .subtitle1-r {
-    @apply font-normal leading-[1.2] tracking-[0em]
+    @apply font-normal leading-[1.2] tracking-[0em];
   }
 
   .subtitle2-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .subtitle2-r {
-    @apply text-[24px] font-normal leading-[1.4] tracking-[0em]
+    @apply text-[24px] font-normal leading-[1.4] tracking-[0em];
   }
 
   .lead-r {
-    @apply font-normal leading-[1.4] tracking-[0em]
+    @apply font-normal leading-[1.4] tracking-[0em];
   }
 
   .lead-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .body-large-r {
-    @apply font-normal leading-[1.4] tracking-[0em]
+    @apply font-normal leading-[1.4] tracking-[0em];
   }
 
   .body-large-sm {
-    @apply font-semibold leading-[1.4] tracking-[0em]
+    @apply font-semibold leading-[1.4] tracking-[0em];
   }
 
   .body-large-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .body-small-r {
-    @apply font-normal leading-[1.4] tracking-[0em]
+    @apply font-normal leading-[1.4] tracking-[0em];
   }
 
   .body-small-sm {
-    @apply font-semibold leading-[1.4] tracking-[0em]
+    @apply font-semibold leading-[1.4] tracking-[0em];
   }
 
   .body-small-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .small-r {
-    @apply font-normal leading-[1.4] tracking-[0em]
+    @apply font-normal leading-[1.4] tracking-[0em];
   }
 
   .small-sm {
-    @apply font-semibold leading-[1.4] tracking-[0em]
+    @apply font-semibold leading-[1.4] tracking-[0em];
   }
 
   .small-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .tiny-r {
-    @apply font-normal leading-[1.4] tracking-[0em]
+    @apply font-normal leading-[1.4] tracking-[0em];
   }
 
   .tiny-sm {
-    @apply font-semibold leading-[1.4] tracking-[0em]
+    @apply font-semibold leading-[1.4] tracking-[0em];
   }
 
   .tiny-b {
-    @apply font-bold leading-[1.4] tracking-[0em]
+    @apply font-bold leading-[1.4] tracking-[0em];
   }
 
   .text-display-m-m {
-    @apply text-[36px] font-semibold leading-[1.2] tracking-[-0.01em]
+    @apply text-[36px] font-semibold leading-[1.2] tracking-[-0.01em];
   }
 
   .text-h3-b-m {
-    @apply text-[26px] font-bold leading-[1.2] tracking-[0rem]
+    @apply text-[26px] font-bold leading-[1.2] tracking-[0rem];
   }
 
   .text-h3-r-m {
-    @apply text-[26px] font-normal leading-[1.2] tracking-[0rem]
+    @apply text-[26px] font-normal leading-[1.2] tracking-[0rem];
   }
 
   .text-h4-b-m {
-    @apply text-[24px] font-bold leading-[1.2] tracking-[0rem]
+    @apply text-[24px] font-bold leading-[1.2] tracking-[0rem];
   }
 
   .text-h4-r-m {
-    @apply text-[24px] font-normal leading-[1.2] tracking-[0rem]
+    @apply text-[24px] font-normal leading-[1.2] tracking-[0rem];
   }
-
 }
 
 @layer utilities {
   .animate-scrollSkills {
     animation: scrollSkills 35s linear infinite;
   }
-
 }

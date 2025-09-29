@@ -27,6 +27,14 @@
       clip-rule="evenodd" />
   </symbol>
 
+
+  <symbol id="youtube" viewBox="0 0 256 180" preserveAspectRatio="xMidYMid">
+    <path
+      d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z"
+      fill="red" />
+    <path fill="#FFF" d="m102.421 128.06 66.328-38.418-66.328-38.418z" />
+  </symbol>
+
   <!-- SECTION ABOUT -->
 
   <symbol id="aboutCap" viewBox="0 0 2048 2048">
@@ -58,6 +66,12 @@
   </symbol>
 
   <!-- SECTION SKILLS -->
+  <symbol id="shadcn" viewBox="0 0 256 256">
+    <path fill="none" d="M0 0h256v256H0z" />
+    <path fill="none" stroke="currentColor" stroke-width="25" stroke-linecap="round"
+      d="M208 128l-80 80M192 40L40 192" />
+  </symbol>
+
   <symbol id="typescript" viewBox="0 0 256 256">
     <path
       d="M20 0h216c11.046 0 20 8.954 20 20v216c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20V20C0 8.954 8.954 0 20 0Z"
@@ -266,7 +280,7 @@
     </g>
   </symbol>
 
-  <symbol id="postgreSql" viewBox="0 0 432.071 445.383">
+  <symbol id="postgre" viewBox="0 0 432.071 445.383">
     <g
       style="fill-rule:nonzero;clip-rule:nonzero;fill:none;stroke:#fff;stroke-width:12.4651;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4">
       <path

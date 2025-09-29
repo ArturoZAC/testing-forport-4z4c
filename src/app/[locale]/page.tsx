@@ -1,16 +1,23 @@
-import { About, Contact, Education, Footer, Hero, Projects, Skills } from "@/views";
+import {
+  About,
+  Contact,
+  Education,
+  Footer,
+  Hero,
+  Projects,
+  Skills,
+} from "@/views";
 
 export default function HomePage() {
-
-  return ( 
+  return (
     <>
-      <Hero/>
-      <About/>
-      <Education />
-      <Skills />
+      {/* <Hero/> */}
+      {/* <About/> */}
+      {/* <Education /> */}
+      {/* <Skills /> */}
       <Projects />
-      <Contact />
-      <Footer />
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </>
   );
 }

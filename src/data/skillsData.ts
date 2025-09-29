@@ -13,7 +13,7 @@ export const svgsSkills = [
   { id: "slack", name: "Slack" },
   { id: "git", name: "Git" },
   { id: "github", name: "GitHub" },
-  { id: "postgreSql", name: "PostgreSQL" },
+  { id: "postgre", name: "PostgreSQL" },
   { id: "mongodb", name: "MongoDB" },
   { id: "nextjs", name: "Next.js" },
   { id: "jest", name: "Jest" },
@@ -27,4 +27,5 @@ export const svgsSkills = [
   { id: "firebase", name: "Firebase" },
   { id: "docker", name: "Docker" },
   { id: "cloudinary", name: "Cloudinary" },
+  { id: "shadcn", name: "Shadcn" },
 ];
