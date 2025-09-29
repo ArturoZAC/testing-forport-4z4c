@@ -11,13 +11,13 @@ import {
 export default function HomePage() {
   return (
     <>
-      {/* <Hero/> */}
-      {/* <About/> */}
-      {/* <Education /> */}
-      {/* <Skills /> */}
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
       <Projects />
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Contact />
+      <Footer />
     </>
   );
 }
