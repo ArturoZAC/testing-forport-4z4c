@@ -1,12 +1,12 @@
 {
-  "Titles":{
+  "Titles": {
     "about": "About Me",
     "education": "Education",
     "skills": "Skills",
     "projects": "Projects",
     "contact": "Contact"
   },
-  "NavBar":{
+  "NavBar": {
     "home": "Home",
     "about": "About",
     "education": "Education",
@@ -20,7 +20,7 @@
     "content": "Hey, I'm Arturo, a Full Stack Developer passionate about building performant, user-friendly, and scalable applications.",
     "buttonCv": "Download CV 📍📄"
   },
-  "About":{
+  "About": {
     "title": "WHO I AM?",
     "mainContent": "💻 As a full-stack developer, I have experience building both front- and back-end platforms. 🧠 I stand out for my ability to solve problems in practical and creative ways. 🔧 Programming is my passion, I enjoy learning new technologies and taking on challenges that push me to improve. 🤝 I'm motivated by working as a team with other talented programmers and continuing to grow every day.",
     "footerContent": "Currently, I continue my passion for programming at Devtalles, actively taking several courses and expanding my knowledge on the same platform. 📚💻",
@@ -33,7 +33,7 @@
     "lead4": "Academic Focus",
     "description4": "Currently pursuing programming courses at Devtalles."
   },
-  "Education":{
+  "Education": {
     "certifications": "Certifications",
     "title1left": "Technological University of Peru",
     "date1left": "JANUARY 2021 - PRESENT",
@@ -51,10 +51,10 @@
     "date2right": "APRIL 2025",
     "description2right": "I took many courses on this platform, most of them from Devtalles, but the one that made the difference was the Figma course on UX/UI, which helped me better understand the user experience."
   },
-  "Skills":{
+  "Skills": {
     "description": "Here are the powerful tools and technologies I use to bring your idea to life. From modern front-end frameworks to robust back-end systems, I build comprehensive and scalable solutions tailored to your specific needs. I focus on delivering high-quality, well-structured products with a lasting impact, ensuring a solid experience for both users and clients. Whether you're starting a new project or improving an existing one, I'm ready to help take it to the next level."
   },
-  "Contact":{
+  "Contact": {
     "name": "Your Name",
     "email": "Your Email",
     "message": "Your Message",
@@ -63,7 +63,13 @@
     "connectTitle": "Leave a message and connect with me",
     "connectDescription": "Whether it’s feedback, collaboration, or simple curiosity, your message matters. Connect with us and let’s create something meaningful together."
   },
-  "Footer":{
+  "Projects": {
+    "description01": "A full-stack authentication app built with the PERN stack, featuring email verification, secure login, protected routes, profile access, and password recovery. Powered by Express, Prisma, JWT on the backend and React, Vite, Zustand on the frontend.",
+    "description02": "My portfolio showcases modern full-stack projects highlighting skills like authentication, state management, routing, and UI/UX. I build with React, Next.js, Vite, Express, Prisma, JWT, and Zustand to deliver performant, maintainable, and polished web applications.",
+    "description03": "This project is a responsive landing page crafted with React and TailwindCSS. It demonstrates modern UI practices, including reusable components, clean layouts, and utility-first styling, making it ideal for showcasing design skills and performance in real projects.",
+    "description04": "Built with React and TailwindCSS, this social media interface highlights interactive features like posts, comments, and user profiles. It focuses on responsive design, modular components, and intuitive styling, reflecting practical front-end development skills in modern web applications."
+  },
+  "Footer": {
     "mainFooter": "A passionate software developer with expertise in both low-level programming and web development technologies, skilled in crafting efficient algorithms, building intuitive front-end systems and user interfaces, and developing scalable back-end architectures using modern frameworks and best practices.",
     "creditsPrimary": "4Z4C © 2025. All rights reserved.",
     "creditsSecondary": "Designed & Built with 🤍 by 4Z4C."

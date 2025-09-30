@@ -9,8 +9,11 @@ import "animate.css";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Portafolio 4Z4C",
+  title: "Portfolio 4Z4C",
   description: "Construido por el dev 4z4c :)",
+  icons: {
+    icon: "/assets/logo-letter.svg",
+  },
 };
 
 export default async function RootLayout({

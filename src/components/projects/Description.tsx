@@ -11,7 +11,8 @@ export const Description = ({
   video,
 }: Properties) => {
   return (
-    <div className={`relative w-full max-w-1/2 max-middle:max-w-full `}>
+    // <div className={`relative w-full max-w-1/2 max-middle:max-w-full `}>
+    <div className="relative">
       <div
         className={`absolute top-1/2 -translate-y-1/2 ${
           isOdd ? "-left-1" : "-right-1"
@@ -38,10 +39,11 @@ export const Description = ({
               )}
             </div>
             <div className="flex gap-x-6 body-large-sm text-body-small-d max-md:text-body-small-m">
-              {links?.map(({ name, nameSvg }) => (
+              {links?.map(({ name, url, nameSvg }) => (
                 <Link
+                  target="_blank"
                   key={name}
-                  href={"/"}
+                  href={url}
                   className="flex justify-center items-center gap-x-2"
                 >
                   <svg className="w-6 h-6">

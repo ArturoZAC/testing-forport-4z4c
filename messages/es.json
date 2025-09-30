@@ -1,12 +1,12 @@
 {
-  "Titles":{
+  "Titles": {
     "about": "Sobre Mi",
     "education": "Educación",
     "skills": "Habilidades",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
-  "NavBar":{
+  "NavBar": {
     "home": "Inicio",
     "about": "Sobre Mi",
     "education": "Educación",
@@ -20,7 +20,7 @@
     "content": "Hola, soy Arturo, un desarrollador Full Stack apasionado por crear aplicaciones de alto rendimiento, fáciles de usar y escalables.",
     "buttonCv": "Descargar CV 📍📄"
   },
-  "About":{
+  "About": {
     "title": "¿QUIEN SOY?",
     "mainContent": "💻 Como desarrollador full-stack, tengo experiencia construyendo tanto plataformas front-end como back-end.🧠 Me destaco por mi capacidad para resolver problemas de manera práctica y creativa.🔧La programación es mi pasión, disfruto aprender nuevas tecnologías y asumir desafíos que me impulsen a mejorar.🤝 Me motiva trabajar en equipo con otros programadores talentosos y seguir creciendo cada día.",
     "footerContent": "Actualmente, continúo con mi pasión por la programación en Devtalles, tomando varios cursos de forma activa y ampliando mis conocimientos en la misma plataforma. 📚💻",
@@ -33,32 +33,32 @@
     "lead4": "Enfoque Académico",
     "description4": "Actualmente sigo formándome en programación a través de cursos en Devtalles."
   },
-  "Education":{
+  "Education": {
     "certifications": "Certificados",
     "title1left": "Universidad Tecnológica del Perú",
     "date1left": "ENERO 2021 - ACTUALIDAD",
     "description1left": "Comencé mis estudios en esta universidad. He aprendido muchas cosas que han servido como base para dominar las tecnologías que usaré en el futuro.",
-    
+
     "title2left": "Academlo",
     "date2left": "ENERO 2024 - JUNIO 2024",
     "description2left": "Fue allí donde descubrí mi verdadera pasión: la programación web. Me encantó aprender tecnologías como React y Node.js, y ver cómo podía construir aplicaciones funcionales desde cero.",
-    
+
     "title3left": "DevTalles",
     "date3left": "DICIEMBRE 2024 - ACTUALIDAD",
     "description3left": "En esta plataforma he repasado y aprendido nuevas tecnologías; practico constantemente y refuerzo lo aprendido con herramientas como Docker, React, Node.js, Next.js, entre otras.",
-    
+
     "title1right": "Cibertec",
     "date1right": "OCTUBRE 2023 - DICIEMBRE 2023",
     "description1right": "Obtuve un certificado en Java en este instituto, donde aprendí programación orientada a objetos, conexión a bases de datos relacionales y ejecución de pruebas unitarias.",
-    
+
     "title2right": "Udemy",
     "date2right": "ABRIL 2025",
     "description2right": "Realicé muchos cursos en esta plataforma, la mayoría de Devtalles, pero el que marcó la diferencia fue el curso de Figma sobre UX/UI, que me ayudó a comprender mejor la experiencia del usuario."
   },
-  "Skills":{
+  "Skills": {
     "description": "Aquí están las herramientas y tecnologías poderosas que utilizo para dar vida a tu idea. Desde modernos frameworks de front-end hasta sistemas de back-end robustos, construyo soluciones completas y escalables adaptadas a tus necesidades específicas. Me enfoco en entregar productos de alta calidad, bien estructurados y con un impacto duradero, asegurando una experiencia sólida tanto para los usuarios como para los clientes. Ya sea que estés comenzando un nuevo proyecto o mejorando uno existente, estoy listo para ayudarte a llevarlo al siguiente nivel."
   },
-  "Contact":{
+  "Contact": {
     "name": "Tu Nombre",
     "email": "Tu Correo",
     "message": "Tu Mensaje",
@@ -67,7 +67,13 @@
     "connectTitle": "Deja un mensaje y conecta conmigo",
     "connectDescription": "Ya sea una opinión, una colaboración o simple curiosidad, tu mensaje es importante. Conecta con nosotros y creemos algo significativo juntos."
   },
-  "Footer":{
+  "Projects": {
+    "description01": "Este proyecto es una aplicación de autenticación full-stack desarrollada con el stack PERN, que ofrece verificación por correo electrónico, inicio de sesión seguro, rutas protegidas, acceso a perfiles y recuperación de contraseñas. Integra Express, Prisma y JWT en el backend, junto con React, Vite y Zustand en el frontend.",
+    "description02": "Mi portafolio presenta proyectos full-stack modernos que destacan habilidades como autenticación, manejo de estado, enrutamiento y diseño UI/UX. Desarrollo con React, Next.js, Vite, Express, Prisma, JWT y Zustand, entregando aplicaciones web optimizadas, mantenibles y con una apariencia profesional.",
+    "description03": "Este proyecto es una landing page responsiva creada con React y TailwindCSS. Demuestra prácticas modernas de interfaz, como componentes reutilizables, diseños limpios y un estilo basado en utilidades, ideal para resaltar habilidades de diseño y rendimiento en proyectos reales.",
+    "description04": "Construida con React y TailwindCSS, esta interfaz de red social incluye funciones interactivas como publicaciones, comentarios y perfiles de usuario. Se centra en diseño responsivo, componentes modulares y estilos intuitivos, reflejando habilidades prácticas de desarrollo frontend en aplicaciones web modernas."
+  },
+  "Footer": {
     "mainFooter": "Un desarrollador de software apasionado, con experiencia tanto en programación de bajo nivel como en tecnologías de desarrollo web, hábil en la construcción de sistemas e interfaces front-end intuitivos y en el desarrollo de arquitecturas back-end escalables utilizando frameworks modernos y buenas prácticas.",
     "creditsPrimary": "4Z4C © 2025. All rights reserved.",
     "creditsSecondary": "Designed & Built with 🤍 by 4Z4C."

@@ -1,9 +1,11 @@
-import { projectsData } from "@/data/projectsDatat";
+import { getProjectsData } from "@/data/projectsData";
 import { IndividualProject } from "./IndividualProject";
 
-export const BodyProject = () => {
+export const BodyProject = async () => {
+  const projectsData = await getProjectsData();
+
   return (
-    <div className="flex flex-col w-full justify-center items-center gap-y-40 max-middle:gap-y-10">
+    <div className="flex flex-col w-full justify-center items-center gap-y-40 max-middle:gap-y-30">
       {projectsData.map((data) => (
         <IndividualProject key={data.title} {...data} />
       ))}

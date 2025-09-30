@@ -48,6 +48,7 @@
   --animate-opacity-about: opacity-about 1s infinite ease-in-out alternate;
   --breakpoint-xs: 30rem;
   --breakpoint-middle: 55rem;
+  --breakpoint-screen-image: 73rem;
   /* --animate-scrollSkills: scrollSkills 60s linear infinite; */
 
   @keyframes colorChange {

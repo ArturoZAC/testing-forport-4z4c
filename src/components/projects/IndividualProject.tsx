@@ -6,19 +6,19 @@ import { Properties } from "@/interfaces/projects/properties.interface";
 
 export const IndividualProject = (propsProject: Properties) => {
   return (
-    <MainContainer
-      className={`flex ${
-        propsProject.isOdd ? "flex-row-reverse" : ""
-      } justify-center gap-x-10 items-stretch h-auto max-middle:flex-col max-middle:gap-y-10`}
-    >
-      <Image
-        width={"524"}
-        height={"288"}
-        alt="beach"
-        src={"/projects/beach.jpg"}
-        draggable={false}
-        className={`w-full max-w-1/2 rounded-2xl max-middle:max-w-full`}
-      />
+    <MainContainer className="grid grid-cols-2 gap-x-6 max-screen-image:grid-cols-1">
+      <div className="w-full relative max-screen-image:mb-14 flex items-stretch shadow-2xl shadow-purple-700/50 rounded-2xl">
+        <Image
+          width={532}
+          height={312}
+          alt="beach"
+          // src={"/projects/beach.jpg"}
+          src={propsProject.imageFront}
+          draggable={false}
+          unoptimized
+          className="object-cover rounded-2xl transition-all duration-300 max-screen-image:w-full"
+        />
+      </div>
       <Description {...propsProject} />
     </MainContainer>
   );
