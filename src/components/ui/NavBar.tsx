@@ -1,46 +1,44 @@
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { MainContainer } from "../responsive/MainContainer";
 import { HamburgerButton } from "../hero";
 import { GetLinksWithTranslate } from "@/data/linksData";
 
 export const NavBar = () => {
-
-  const [activeLink, setActiveLink] = useState('/');
+  const [activeLink, setActiveLink] = useState("/");
   const [isMenuPressed, setIsMenuPressed] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const [language, setLanguage] = useState<'ENG' | 'ESP'>('ENG');
+  const [language, setLanguage] = useState<"ENG" | "ESP">("ENG");
   const [isOpen, setIsOpen] = useState(false);
 
   const links = GetLinksWithTranslate();
   const router = useRouter();
   const pathname = usePathname();
 
-  const handleLanguageChange = (lang: 'ENG' | 'ESP') => {
-    localStorage.setItem('languague', lang ?? 'ENG');
-    const languageValue = localStorage.getItem('languague');
-    setLanguage(languageValue as 'ENG' | 'ESP');
+  const handleLanguageChange = (lang: "ENG" | "ESP") => {
+    localStorage.setItem("language", lang ?? "ENG");
+    const languageValue = localStorage.getItem("language");
+    setLanguage(languageValue as "ENG" | "ESP");
     setIsOpen(false);
-    
-    const langPrefix = lang === 'ENG' ? '/en' : '/es';
-    
-    const pathWithoutLang = pathname.replace(/^\/(en|es)/, '');
-    
+
+    const langPrefix = lang === "ENG" ? "/en" : "/es";
+
+    const pathWithoutLang = pathname.replace(/^\/(en|es)/, "");
+
     router.push(`${langPrefix}${pathWithoutLang}`);
   };
 
   useEffect(() => {
     // const languageEffect = localStorage.getItem('languague');
     // setLanguage(languageEffect as 'ENG' | 'ESP' ?? 'ENG');
-    const pathLang = pathname.startsWith('/es') ? 'ESP': 'ENG';
+    const pathLang = pathname.startsWith("/es") ? "ESP" : "ENG";
     setLanguage(pathLang);
-    localStorage.setItem('language', pathLang);
+    localStorage.setItem("language", pathLang);
   }, [pathname]);
-  
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -89,21 +87,33 @@ export const NavBar = () => {
       <MainContainer className="h-[60px] max-md:h-[50px] rounded-2xl flex px-6 py-4 max-md:px-3 max-md:py-2 justify-between bg-primary border-2 border-neutral-700">
         <div className="flex justify-center items-center">
           <Link href="/">
-            <Image src="/navbar/logo-4z4c-white.png" alt="logo" width={75} height={25} className="w-[75px] h-[25px] max-md:w-[60px]" />
+            <Image
+              src="/navbar/logo-4z4c-white.png"
+              alt="logo"
+              width={75}
+              height={25}
+              className="w-[75px] h-[25px] max-md:w-[60px]"
+            />
           </Link>
         </div>
         <div className="flex items-center justify-center gap-x-[20px]">
           <nav>
             <ul className="flex items-center justify-center small-r text-small-d max-md:text-small-m gap-x-[20px] h-[29px] max-md:hidden">
-              {
-                links.map((link) => (
-                  <li className={`underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''} flex flex-col items-center justify-center h-[inherit] text-secondary`} key={link.path}>
-                    <Link href={link.path} onClick={() => handleLinkClick(link.path)}>
-                      {link.name}
-                    </Link>
-                  </li>
-                ))
-              }
+              {links.map((link) => (
+                <li
+                  className={`underline-animate ${
+                    activeLink === link.path ? "animate-colorChange active" : ""
+                  } flex flex-col items-center justify-center h-[inherit] text-secondary`}
+                  key={link.path}
+                >
+                  <Link
+                    href={link.path}
+                    onClick={() => handleLinkClick(link.path)}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div className="flex gap-x-2">
@@ -111,38 +121,67 @@ export const NavBar = () => {
               <div
                 onClick={() => setIsOpen(!isOpen)}
                 className="cursor-pointer body-small-b text-body-small-d max-md:text-body-small-m flex items-center justify-center p-1 bg-gradient-to-r from-violet-700 to-fuchsia-700 rounded-lg gap-x-2 max-md:gap-x-1.5 text-secondary"
-              > 
-                {
-                 language === 'ENG' 
-                  ?<Image src='/navbar/ENG.png' alt='language-icon' width={24} height={24} />
-                  :<Image src='/navbar/ESP.png' alt='language-icon' width={24} height={24} /> 
-                }
+              >
+                {language === "ENG" ? (
+                  <Image
+                    src="/navbar/ENG.png"
+                    alt="language-icon"
+                    width={24}
+                    height={24}
+                  />
+                ) : (
+                  <Image
+                    src="/navbar/ESP.png"
+                    alt="language-icon"
+                    width={24}
+                    height={24}
+                  />
+                )}
                 <p>{language}</p>
               </div>
 
               {isOpen && (
                 <div className="absolute animate__animated animate__fadeIn top-full mt-1 -left-0 max-md:-left-1 bg-primary border border-neutral-700 rounded-lg shadow-lg z-50 min-w-full text-sm text-secondary">
-                  {['ENG', 'ESP'].map((lang) => (
+                  {["ENG", "ESP"].map((lang) => (
                     <div
                       key={lang}
-                      onClick={() => handleLanguageChange(lang as 'ENG' | 'ESP')}
+                      onClick={() =>
+                        handleLanguageChange(lang as "ENG" | "ESP")
+                      }
                       // onClick={() => {
                       //   setLanguage(lang as 'ENG' | 'ESP');
                       //   setIsOpen(false);
                       // }}
-                      className={`min-w-[73px] flex cursor-pointer items-center justify-center px-1 py-2.5 gap-x-2 hover:bg-neutral-800 rounded ${language === lang ? 'bg-gradient-to-r from-violet-700 to-fuchsia-700 font-bold' : ''
-                        }`}
+                      className={`min-w-[73px] flex cursor-pointer items-center justify-center px-1 py-2.5 gap-x-2 hover:bg-neutral-800 rounded ${
+                        language === lang
+                          ? "bg-gradient-to-r from-violet-700 to-fuchsia-700 font-bold"
+                          : ""
+                      }`}
                     >
-                      <Image src={`/navbar/${lang}.png`} alt='language-icon' width={24} height={24} />
+                      <Image
+                        src={`/navbar/${lang}.png`}
+                        alt="language-icon"
+                        width={24}
+                        height={24}
+                      />
                       <p>{lang}</p>
                     </div>
                   ))}
                 </div>
               )}
             </div>
-            <HamburgerButton isMenuPressed={isMenuPressed} toggleMenu={toggleMenu} />
+            <HamburgerButton
+              isMenuPressed={isMenuPressed}
+              toggleMenu={toggleMenu}
+            />
             {(isMenuPressed || isClosing) && (
-              <div className={`fixed top-0 left-0 w-full h-screen bg-fourth z-50 flex flex-col p-6 gap-6 md:hidden ${isClosing ? 'animate-slide-out-navbar' : 'animate-slide-in-navbar'}`}>
+              <div
+                className={`fixed top-0 left-0 w-full h-screen bg-fourth z-50 flex flex-col p-6 gap-6 md:hidden ${
+                  isClosing
+                    ? "animate-slide-out-navbar"
+                    : "animate-slide-in-navbar"
+                }`}
+              >
                 <div className="flex justify-end">
                   <button
                     className="group w-8 h-8 text-slate-800 bg-gradient-to-r from-violet-700 to-fuchsia-700 text-center items-center justify-center rounded shadow hover:shadow transition flex"
@@ -154,8 +193,20 @@ export const NavBar = () => {
                       viewBox="0 0 16 16"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <rect y="7" width="16" height="2" rx="1" transform="rotate(45 8 8)" />
-                      <rect y="7" width="16" height="2" rx="1" transform="rotate(-45 8 8)" />
+                      <rect
+                        y="7"
+                        width="16"
+                        height="2"
+                        rx="1"
+                        transform="rotate(45 8 8)"
+                      />
+                      <rect
+                        y="7"
+                        width="16"
+                        height="2"
+                        rx="1"
+                        transform="rotate(-45 8 8)"
+                      />
                     </svg>
                   </button>
                 </div>
@@ -163,12 +214,19 @@ export const NavBar = () => {
                   {links.map((link) => (
                     <li
                       key={link.path}
-                      className={`text-secondary body-large text-body-large-m underline-animate ${activeLink === link.path ? 'animate-colorChange active' : ''}`}
+                      className={`text-secondary body-large text-body-large-m underline-animate ${
+                        activeLink === link.path
+                          ? "animate-colorChange active"
+                          : ""
+                      }`}
                     >
-                      <Link href={link.path} onClick={() => {
-                        handleLinkClick(link.path);
-                        toggleMenu();
-                      }}>
+                      <Link
+                        href={link.path}
+                        onClick={() => {
+                          handleLinkClick(link.path);
+                          toggleMenu();
+                        }}
+                      >
                         {link.name}
                       </Link>
                     </li>
@@ -180,5 +238,5 @@ export const NavBar = () => {
         </div>
       </MainContainer>
     </div>
-  )
+  );
 };

@@ -10,7 +10,7 @@ export const BodyEducation = async () => {
   ]);
 
   return (
-    <div className="flex flex-col w-full justify-center items-center gap-y-20 max-md:gap-y-10">
+    <div className="flex flex-col w-full justify-center items-center gap-y-20 max-md:gap-y-30">
       <MainContainer className="flex justify-center items-stretch h-auto">
         <div className="w-1/2 flex flex-col justify-center items-center h-full max-md:hidden">
           {leftCards.map((card, _) => (

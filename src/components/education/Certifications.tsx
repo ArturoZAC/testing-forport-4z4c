@@ -13,6 +13,8 @@ import "./styles.css";
 // import required modules
 import { MainContainer } from "../responsive/MainContainer";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { certificationsData } from "@/data/certificationsData";
 
 export const Certifications = () => {
   const t = useTranslations("Education");
@@ -38,15 +40,16 @@ export const Certifications = () => {
             },
           }}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          {certificationsData.map(({ url }) => (
+            <SwiperSlide key={url}>
+              <Image
+                fill
+                alt="imageCetification"
+                src={url}
+                className="rounded-xl"
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </MainContainer>
