@@ -35,7 +35,7 @@ export const getProjectsData = async (): Promise<Properties[]> => {
         "tailwindcss",
         "shadcn",
       ],
-      video: "https://www.youtube.com/watch?v=nym0yvPO1Gk&t=222s",
+      video: "https://www.youtube.com/watch?v=Vc6SHPve-gM",
     },
 
     {
