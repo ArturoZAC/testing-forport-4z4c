@@ -30,9 +30,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.className} antialiased text-secondary scroll-smooth`}
-      >
+      <body className={`${montserrat.className} antialiased text-secondary scroll-smooth`}>
         <NextIntlClientProvider>
           {children}
           <Toaster />
